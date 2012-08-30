@@ -1,4 +1,4 @@
-wpcandy-theme
+WPCandy Theme
 =============
 
-The theme used at WPCandy.com.
+The WordPress theme used at WPCandy.com.
