@@ -1,0 +1,5 @@
+/* Dashboard only, non-admin CSS */
+
+.media-item-info input.button {
+	display: none;
+}

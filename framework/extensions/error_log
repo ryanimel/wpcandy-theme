@@ -1,0 +1,2 @@
+[16-Feb-2011 03:47:57] PHP Parse error:  syntax error, unexpected $end in /home/gooroo/public_html/wp-content/plugins/gravityforms/gravityforms.php on line 574
+[23-Mar-2011 23:42:30] PHP Fatal error:  Class 'WPF' not found in /home/gooroo/public_html/wp-content/themes/wpcandynew/framework/class.wpf-admin.php on line 8
