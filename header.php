@@ -60,7 +60,12 @@ ados_load();
 				<?php do_action( 'branding_open' ); ?>
 
 				<div id="site-title" class="column-3">
-					<?php do_action( 'site_title' ); ?>
+					<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
+					<<?php echo $heading_tag; ?> id="site-title">
+						<span>
+							<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						</span>
+					</<?php echo $heading_tag; ?>><!-- #site-title -->
 				</div><!--#site-title-->
 				
 				<div id="site-topics" class="column-5">
@@ -82,21 +87,15 @@ ados_load();
 			} ?>
 
 			<div id="site-navigation" role="navigation">
-				<?php do_action( 'site_navigation' ); ?>
+				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
+				<?php wp_nav_menu( array( 'container' => 'nav', 'container_class' => 'nav-menu nav-menu-fat wrap', 'menu_class' => 'nav-menu', 'theme_location' => 'header', 'enable_bp_links' => true, 'show_home' => true ) ); ?>
 			</div><!--#site-navigation-->
-
-			<?php do_action( 'header_close' ); ?>
 
 		</header><!--header-->
 		
 		<?php // get_template_part( 'library/templates/breadcrumbs' ); ?>
 
-		<?php do_action( 'between_header_main' ); ?>
-
 		<div id="main" role="main"<?php if(in_category('Videos') && is_single()) { ?> class="category-videos clearfix"<?php } else { ?> class="clearfix"<?php } ?>>
 			
-			<?php do_action( 'main_open' ); ?>
-
 			<div class="wrap clearfix">
 				
-				<?php do_action( 'main_wrap_open' ); ?>

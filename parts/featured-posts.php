@@ -1,6 +1,6 @@
 <div id="featured">
 	<h2 class="entry-title content-header">Featured</h2>
-	<ul><?php $i == 0 ?>
+	<ul><?php $i = 0 ?>
 		<?php query_posts('showposts=4&tag=featured');
 		if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php $i ++ ?>
