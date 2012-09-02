@@ -128,7 +128,7 @@ function t() {
 		return $wpf_theme->textdomain;
 	}
 	
-	return $wpf_theme->textdomain = apply_filters( 'wpf_textdomain', get_template() );
+	//return $wpf_theme->textdomain = apply_filters( 'wpf_textdomain', get_template() );
 }
 
 /**

@@ -2,32 +2,32 @@
 
 class WPF_Template_Tags {
 	function WPF_Template_Tags() {
-		add_action( 'wp_title', array(&$this, 'filter_wp_title'), 9, 3 );
+		add_action( 'wp_title', array($this, 'filter_wp_title'), 9, 3 );
 
-		add_action( 'loop_404_content', array(&$this, 'loop_404_content') );
+		add_action( 'loop_404_content', array($this, 'loop_404_content') );
 		
-		// add_action( 'loop_has_posts_before', array( &$this, 'add_post_pagination' ) );
-		add_action( 'loop_has_posts_after', array( &$this, 'add_post_pagination' ) );
+		// add_action( 'loop_has_posts_before', array( $this, 'add_post_pagination' ) );
+		add_action( 'loop_has_posts_after', array( $this, 'add_post_pagination' ) );
 
 		add_action( 'comments_list_before', 'wpf_comments_pagination' );
 		add_action( 'comments_list_after', 'wpf_comments_pagination' );
 		
-		add_action( 'site_title', array( &$this, 'site_title' ) );
-		add_action( 'site_description', array( &$this, 'site_description' ) );
-		add_action( 'site_navigation', array( &$this, 'site_navigation' ) );
+		add_action( 'site_title', array( $this, 'site_title' ) );
+		add_action( 'site_description', array( $this, 'site_description' ) );
+		add_action( 'site_navigation', array( $this, 'site_navigation' ) );
 		
-		add_action( 'site_info', array( &$this, 'site_info' ) );
-		add_action( 'site_credits', array( &$this, 'site_credits' ) );
+		add_action( 'site_info', array( $this, 'site_info' ) );
+		add_action( 'site_credits', array( $this, 'site_credits' ) );
 	}
 
 	function callback( $method, $args = array() ) {
-		if ( method_exists( &$this, $method ) ) {
-			return call_user_func_array( array( &$this, $method ), $args );
+		if ( method_exists( $this, $method ) ) {
+			return call_user_func_array( array( $this, $method ), $args );
 		}
 	}
 
 	function get_method( $method ) {
-		if ( method_exists( &$this, $method ) )
+		if ( method_exists( $this, $method ) )
 			return $method;
 
 		return false;

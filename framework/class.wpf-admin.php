@@ -22,13 +22,13 @@ class WPF_Admin extends WPF {
 		$hooks = array( 'admin_init', 'admin_head' );
 		foreach ( $hooks as $hook ) {		
 			if ( method_exists( $this, $hook ) ) {
-				add_action( $hook, array( &$this, $hook ) );
+				add_action( $hook, array( $this, $hook ) );
 			}
 		}
 		
-		add_action( 'load-' . $this->page_hook, array( &$this, 'contextual_help' ) );
-		add_action( "wpf_display_notices_{$this->page_slug}", array( &$this, 'display_notices' ) );
-		add_action( "admin_head-{$this->page_hook}", array(&$this, 'inject_css' ) );
+		add_action( 'load-' . $this->page_hook, array( $this, 'contextual_help' ) );
+		add_action( "wpf_display_notices_{$this->page_slug}", array( $this, 'display_notices' ) );
+		add_action( "admin_head-{$this->page_hook}", array($this, 'inject_css' ) );
 	}
 	
 	function setup_globals() {
@@ -196,15 +196,15 @@ class WPF_Admin extends WPF {
 	}
 
 	function callback( $method, $args = array() ) {
-		if ( method_exists( &$this, $method ) ) {
-			return call_user_func_array( array( &$this, $method ), $args );
+		if ( method_exists( $this, $method ) ) {
+			return call_user_func_array( array( $this, $method ), $args );
 		}
 	}
 
 	function get_method( $method ) {
 		$this->maybe_debug( $method );
 
-		if ( method_exists( &$this, $method ) ) {
+		if ( method_exists( $this, $method ) ) {
 			return $method;
 		} else {
 			return false;
