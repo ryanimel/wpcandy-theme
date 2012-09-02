@@ -176,7 +176,7 @@ function wpcandy_theme_assets() {
 		wp_dequeue_style( 'wpsc-thickbox' );
 		wp_dequeue_style( 'wpsc-theme-css' );
 		wp_dequeue_style( 'wpsc-theme-css-compatibility' );
-		wp_dequeue_style( 'wp-e-commerce-dynamic', site_url( "/index.php?wpsc_user_dynamic_css=true&category=$category_id" ) );
+		wp_dequeue_style( 'wp-e-commerce-dynamic', site_url( "/index.php?wpsc_user_dynamic_css=true" ) );
 		
 		remove_action( "init", 'wpsc_user_dynamic_css' );
 	
