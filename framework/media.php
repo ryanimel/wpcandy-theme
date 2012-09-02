@@ -1,5 +1,13 @@
 <?php
 /**
+ * Functions for handling attachments and media uploads in WP Framework.
+ *
+ * @todo Rework all of these functions.
+ *
+ * @package WP Framework
+ */
+
+/**
  * Loads the correct function for handling attachments. Checks the attachment mime 
  * type to call correct function. Image attachments are not loaded with this function.
  * The functionality for them resides in image.php.
@@ -8,7 +16,7 @@
  * this could lead to messy template files. For now, we'll use separate functions for handling 
  * attachment content. The biggest issue here is with handling different video types.
  *
- * @since 0.5
+ * @since 0.3.0
  * @uses get_post_mime_type() Gets the mime type of the attachment.
  * @uses wp_get_attachment_url() Gets the URL of the attachment file.
  */
@@ -35,7 +43,7 @@ function wpf_display_attachment() {
  * @todo Run a battery of tests on many different applications.
  * @todo Figure out what to do with FLV files outside of the current functionality.
  *
- * @since 0.3
+ * @since 0.3.0
  * @param string $mime attachment mime type
  * @param string $file attachment file URL
  * @return string
@@ -52,7 +60,7 @@ function wpf_application_attachment( $mime = '', $file = '' ) {
  * Handles text attachments on their attachment pages.
  * Uses the <object> element to embed media in the pages.
  *
- * @since 0.3
+ * @since 0.3.0
  * @param string $mime attachment mime type
  * @param string $file attachment file URL
  * @return string
@@ -71,7 +79,7 @@ function wpf_text_attachment( $mime = '', $file = '' ) {
  *
  * @todo Test out and support more audio types.
  *
- * @since 0.2.2
+ * @since 0.3.0
  * @param string $mime attachment mime type
  * @param string $file attachment file URL
  * @return string
@@ -90,11 +98,9 @@ function wpf_audio_attachment( $mime = '', $file = '' ) {
  * Handles video attachments on attachment pages.
  * Add other video types to the <object> element.
  *
- * In 0.6, FLV files were moved to using wpf_application_attachment.
- *
  * @todo Test out and support more video types.
  *
- * @since 0.2.2
+ * @since 0.3.0
  * @param string $mime attachment mime type
  * @param string $file attachment file URL
  * @return string
@@ -116,9 +122,9 @@ function wpf_video_attachment( $mime = false, $file = false ) {
 /**
  * Remove inline styles printed when the gallery shortcode is used.
  *
- * Galleries are styled by the theme in Twenty Ten's style.css.
+ * Galleries are styled by the theme's style.css.
  *
- * @since 1.0
+ * @since 0.3.0
  * @return string The gallery style filter, with the styles themselves removed.
  */
 function wpf_remove_gallery_css( $css ) {

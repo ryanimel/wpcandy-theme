@@ -89,13 +89,7 @@ ados_load();
 
 		</header><!--header-->
 		
-		<?php if ( is_page( 16742 ) || bbp_is_forum() || bbp_is_reply() || bbp_is_topic() || bbp_is_single_user() ) {
-		
-			// get_template_part( 'discussions-header' );
-		
-		} ?> 
-		
-		<?php get_template_part( 'library/templates/breadcrumbs' ); ?>
+		<?php // get_template_part( 'library/templates/breadcrumbs' ); ?>
 
 		<?php do_action( 'between_header_main' ); ?>
 

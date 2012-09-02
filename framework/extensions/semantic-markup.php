@@ -8,17 +8,17 @@
  * @subpackage Semantic Markup
  */
 
-add_filter( 'body_class', 'wpf_filter_body_class', 9 );
-add_filter( 'post_class', 'wpf_filter_post_class', 9, 3 );
-add_filter( 'comment_class', 'wpf_filter_comment_class', 9 );
+add_filter( 'body_class', 'wpf_filter_body_class', 20 );
+add_filter( 'post_class', 'wpf_filter_post_class', 20, 3 );
+add_filter( 'comment_class', 'wpf_filter_comment_class', 20 );
 
 /**
- * Generates semantic classes for <body> element.
+ * Enhances the body_class() with more semantic classes.
  *
- * @since 0.2
+ * @since 0.3.0
  */
 function wpf_filter_body_class( $classes ) {
-	global $wp_query, $wp_registered_sidebars;
+	global $wpf_theme, $wp_query, $wp_registered_sidebars;
 
 	// Starts the semantic markup array
 	$classes[] = 'wpf';
@@ -26,18 +26,17 @@ function wpf_filter_body_class( $classes ) {
 	// locale
 	$classes[] = get_locale();
 
-	// get all the widget areas
-	if ( !empty($wp_registered_sidebars) )
-		$classes = array_merge( $classes, array_map( '__wpf_widget_area_classes', array_keys( $wp_registered_sidebars ) ) );
-	else
-		$classes[] = 'no-sidebars';
-	
-	// @todo get all widgets too?
+	// BuddyPress Support
+	if ( is_bp_component_page() )
+		$classes[] = 'bp';
+
+	// @todo find a way to get active widget-areas on the current page. is that possible?
 
 	// Device & Browser detection
-	$classes = array_merge( $classes, wpf_semantic_detection() );
+	$classes = array_merge( $classes, wpf_semantic_device_detection() );
 
 	// Applies the time- and date-based classes
+	// @todo need to adjust for daylight savings
 	$time = time() + ( get_option( 'gmt_offset' ) * 3600 );
 	$classes[] = strtolower( gmdate( '\yY \mm \dd \hH l', $time ) );
 
@@ -65,7 +64,16 @@ function wpf_filter_body_class( $classes ) {
 	if ( ( ( $page = $wp_query->get( 'paged' ) ) || ( $page = $wp_query->get( 'page' ) ) ) && $page > 1 )
 		$classes[] = 'paged paged-' . intval( $page );
 	
-	$classes[] = basename( wpf_get_requested_template() );
+	// note: - maybe add this: defined('WP_DEBUG') && WP_DEBUG
+	if ( $wpf_theme->requested_template ) {
+		$classes[] = 'theme-' . strtolower( get_stylesheet() );
+		preg_match( '/('. get_template() .'|'. get_stylesheet() .')\/(.*)/is', $wpf_theme->requested_template, $matches );
+		$template = str_replace( '/', '_', str_replace( '.', '-', $matches[0] ) );
+		$classes[] = 'template-'. strtolower( $template );
+	}
+	
+	/* Merge WP classes with WPF classes */
+	// $classes = array_merge( (array) $bp_classes, (array) $wp_classes );
 
 	$classes = array_unique( $classes );
 	$classes = array_map( 'esc_attr', $classes );
@@ -73,7 +81,11 @@ function wpf_filter_body_class( $classes ) {
 	return apply_filters( 'wpf_filter_body_class', $classes );
 }
 
-
+/**
+ * Enhances the post_class() with more semantic classes.
+ *
+ * @since 0.3.0
+ */
 function wpf_filter_post_class( $classes, $class, $post_id ) {
 	static $post_alt, $post_count;
 
@@ -124,13 +136,18 @@ function wpf_filter_post_class( $classes, $class, $post_id ) {
 	return apply_filters( 'wpf_filter_post_class', $classes );
 }
 
+/**
+ * Enhances the comment_class() with more semantic classes.
+ *
+ * @since 0.3.0
+ */
 function wpf_filter_comment_class( $classes ) {
 	global $comment;
 	static $comment_count;
 
 	// Comment count
 	$classes[] = 'commentnum-' . ++$comment_count;
-	
+
 	// Comment Parent
 	if ( $comment->comment_parent )
 		$classes[] = 'parent';
@@ -165,7 +182,12 @@ function wpf_filter_comment_class( $classes ) {
 	return apply_filters( 'wpf_filter_comment_class', $classes );
 }
 
-function wpf_semantic_detection() {
+/**
+ * Returns an array of device and browser info based on the user agent.
+ *
+ * @since 0.3.0
+ */
+function wpf_semantic_device_detection() {
 	global $wpf_theme, $is_IE, $is_opera, $is_safari, $is_chrome, $is_iphone;
 
 	if ( !empty($wpf_theme->user_agent) )
@@ -253,15 +275,16 @@ function wpf_semantic_detection() {
 
 	$classes[] = $browser;
 
-	$wpf_theme->user_agent = apply_filters( 'wpf_semantic_detection', $classes );
+	$wpf_theme->user_agent = apply_filters( 'wpf_semantic_device_detection', $classes );
 
 	return $wpf_theme->user_agent;
 }
 
-function __wpf_widget_area_classes( $widget_area ) {
-	return is_active_sidebar( $widget_area ) ? "{$widget_area}-active" : '';
-}
-
+/**
+ * Helper function for wpf_filter_post_class();
+ *
+ * @since 0.3.0
+ */
 function __wpf_convert_post_tag_to_tag( $taxonomy ) {
 	return ( 'post_tag' == $taxonomy ) ? 'tag' : $taxonomy;
 }
