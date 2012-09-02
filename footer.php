@@ -16,7 +16,7 @@
 			<?php do_action( 'wpcandy_theme_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'wpcandy_theme' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'wpcandy_theme' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'wpcandy_theme' ), 'wpcandy_theme', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<?php printf( __( '%1$s by %2$s with %3$s.', 'wpcandy_theme' ), 'WPCandy Theme', '<a href="http://ryanimel.com/" rel="designer">Ryan Imel</a>', 'many kudos' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
