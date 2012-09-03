@@ -6,27 +6,30 @@
  * @since WPCandy Theme 1.0
  */
 
-
-/* Set the content width. */
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ *
+ * @since WPCandy Theme 1.0
+ */
 if ( ! isset( $content_width ) )
 	$content_width = 600; /* pixels */
 
-
 if ( ! function_exists( 'wpcandy_theme_setup' ) ):
-/** 
- * Sets theme defaults and registers support for WordPress features.
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
  *
  * Note that this function is hooked into the after_setup_theme hook, which runs
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since wpcandy_theme 1.0
+ * @since WPCandy Theme 1.0
  */
 function wpcandy_theme_setup() {
 
-	// Custom template tags for this theme.
-	// I like this idea, but commented out for now.
-	//require( get_template_directory() . '/inc/template-tags.php' );
+	/**
+	 * Custom template tags for this theme.
+	 */
+	require( get_template_directory() . '/inc/template-tags.php' );
 
 	// Make theme translatable.
 	// load_theme_textdomain( 'wpcandy_theme', get_template_directory() . '/languages' );
@@ -48,12 +51,16 @@ function wpcandy_theme_setup() {
 	) );
 
 	// Editor Styles support.
-	add_editor_style( '/library/css/editor-style.01.css' );	
+	add_editor_style( '/css/editor-style.01.css' );
 
+	/**
+	 * Add support for the Aside Post Formats
+	 */
+	add_theme_support( 'post-formats', array( 'aside', ) );
+	
 }
 endif; // wpcandy_theme_setup
 add_action( 'after_setup_theme', 'wpcandy_theme_setup' );
-
 
 /**
  * Register widgetized area and update sidebar with default widgets.
@@ -153,16 +160,22 @@ function wpcandy_theme_scripts() {
 	wp_dequeue_style( 'bbpress-style' );
 	wp_dequeue_script('cfq');
 
-	wp_enqueue_style( 'master', get_template_directory_uri() . '/library/css/master.css', null, '1.3.6.9.9.9.2' );
+	wp_enqueue_style( 'master', get_template_directory_uri() . '/css/master.css', null, '1.3.6.9.9.9.2' );
 
 	if ( is_page( 'coverage' ) ) {
-			wp_enqueue_script( 'listnav', get_template_directory_uri() . '/library/js/listnav.js', array('jquery'), '1.0', true );
+			wp_enqueue_script( 'listnav', get_template_directory_uri() . '/js/listnav.js', array('jquery'), '1.0', true );
 	}
+
+	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
 	wp_dequeue_script( 'comment-reply' );
 
-	if ( is_singular() && comments_open() ) {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if ( is_singular() && wp_attachment_is_image() ) {
+		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
 	if ( !in_category( '995' ) ) {
@@ -194,7 +207,7 @@ function wpcandy_theme_scripts() {
 
 	wp_dequeue_script( 'dtheme-ajax-js' );
 
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/library/js/script.js', array('jquery'), '1.1.4', true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.1.4', true );
 }
 add_action( 'wp_enqueue_scripts', 'wpcandy_theme_scripts' );
 
@@ -222,7 +235,7 @@ add_action( 'wp_enqueue_scripts', 'bp_dtheme_enqueue_styles' );
 function bp_dtheme_enqueue_styles() {
 
 	// Default CSS
-	wp_enqueue_style( 'master', get_template_directory_uri() . '/library/css/master.css', null, '1.0' );
+	wp_enqueue_style( 'master', get_template_directory_uri() . '/css/master.css', null, '1.0' );
 
 }
 
