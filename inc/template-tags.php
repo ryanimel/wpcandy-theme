@@ -160,3 +160,43 @@ function wpcandy_theme_category_transient_flusher() {
 }
 add_action( 'edit_category', 'wpcandy_theme_category_transient_flusher' );
 add_action( 'save_post', 'wpcandy_theme_category_transient_flusher' );
+
+
+/**
+ * Conditional to test if a post is in a target category.
+ *
+ * @param int|array $cats The target categories. Integer ID or array of integer IDs
+ * @param int|object $_post The post. Omit to test the current post in the Loop or main query
+ * @return bool True if at least 1 of the post's categories is a descendant of any of the target categories
+ * @see get_term_by() You can get a category by name or slug, then pass ID to this function
+ * @uses get_term_children() Passes $cats
+ * @uses in_category() Passes $_post (can be empty)
+ * @version 2.7
+ * @link http://codex.wordpress.org/Function_Reference/in_category#Testing_if_a_post_is_in_a_descendant_category
+ * @since WPCandy Theme 1.0
+ */
+function post_is_in_descendant_category( $cats, $_post = null ) {
+	foreach ( (array) $cats as $cat ) {
+		// get_term_children() accepts integer ID only
+		$descendants = get_term_children( (int) $cat, 'category');
+		if ( $descendants && in_category( $descendants, $_post ) )
+			return true;
+	}
+	return false;
+}
+
+
+/**
+ * WPCandy comment policy link
+ */
+function wpcandy_theme_comment_policy_notification() {
+
+	printf( __( '<p class="comment-notes">Please note that WPCandy is a <a href="%1$s" title="%2$s">moderated community</a>.', 'wpcandy-theme' ),
+		esc_url( get_permalink( 4900 ) ),
+		get_the_title( 4900 )
+	);
+
+}
+add_action( 'comment_form_top','wpcandy_theme_comment_policy_notification' );
+
+

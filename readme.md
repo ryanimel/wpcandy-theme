@@ -8,4 +8,4 @@ WPCandy Theme is built from the ground up to be _just_ a theme -- and proud of i
 
 Recommended plugins when using this theme include:
 
-* Plugin list starts here.
+* [Login Background](http://github.com/ryanimel/login-background/ "Login Background plugin on Github")
