@@ -27,14 +27,10 @@ if ( ! function_exists( 'wpcandy_theme_setup' ) ):
  */
 function wpcandy_theme_setup() {
 
-	/**
-	 * Custom template tags for this theme.
-	 */
+	// Custom template tags for this theme.
 	require( get_template_directory() . '/inc/template-tags.php' );
 
-	/**
-	 * Enqueues of styles and scripts are elsewhere. They are many. 
-	 */
+	// Enqueues of styles and scripts are elsewhere. They are many.
 	require( get_template_directory() . '/inc/enqueue.php' );
 
 	// Make theme translatable.
@@ -59,9 +55,7 @@ function wpcandy_theme_setup() {
 	// Editor Styles support.
 	add_editor_style( '/css/editor-style.01.css' );
 
-	/**
-	 * Add support for the Aside Post Formats
-	 */
+	// Add support for the Aside Post Formats
 	add_theme_support( 'post-formats', array( 'aside', ) );
 	
 }
@@ -72,7 +66,7 @@ add_action( 'after_setup_theme', 'wpcandy_theme_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets.
  *
- * @since wpcandy_theme 1.0
+ * @since WPCandy Theme 1.0
  */
 function wpcandy_theme_widgets_init() {
 	register_sidebar( array(
@@ -199,10 +193,6 @@ function wpcandy_remove_menu_pages() {
 	}
 
 }
-
-
-
-
 
 add_action('admin_init', 'rwi_wpcandy_remove_dashboard_widgets');
 function rwi_wpcandy_remove_dashboard_widgets() {
