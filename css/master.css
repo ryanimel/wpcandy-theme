@@ -98,6 +98,13 @@ footer, header, hgroup, menu, nav, section, summary {
 	outline: none;
 }
 
+/* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
 
 /*-----------------------------------------------------------------------------
 2.0 - Global Elements
@@ -1118,6 +1125,14 @@ div.aligncenter {
 /*-----------------------------------------------------------------------------
 5.0 - Site Navigation
 -----------------------------------------------------------------------------*/
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+}
+.main-small-navigation .menu {
+	display: none;
+}
 
 ul { 
 	list-style: disc;
