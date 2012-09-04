@@ -134,6 +134,21 @@ div.content-cats {
 	width: 48px;
 }
 
+/* Previous/Next Navigation */
+#nav-prevnext {
+	width: 600px;
+}
+
+#nav-prevpost,
+#nav-nextpost {
+	width: 260px;
+}
+
+#nav-nextpost a,
+#nav-prevpost a {
+	width: 155px;
+}
+
 
 /*-----------------------------------------------------------------------------
 3.0 - Margins/paddings and positioning
@@ -391,6 +406,67 @@ ol ul {
 	position: relative;
 }
 
+/* Previous/Next Navigation */
+#nav-prevnext {
+	clear: both;
+	margin: 0 0 15px 0;
+	padding: 20px 0 0 0;
+}
+
+#nav-prevpost,
+#nav-nextpost {
+	height: 85px;
+	position: relative;
+}
+
+#nav-prevpost {
+	float: left;
+}
+
+#nav-prevpost img {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+
+#nav-nextpost img {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+#nav-nextpost a,
+#nav-prevpost a {
+	position: absolute;
+	left: 90px;
+	top: 15px;
+}
+
+#nav-prevpost a {
+	left: 90px;
+}
+
+#nav-nextpost a {
+	right: 90px;
+}
+
+#nav-nextpost {
+	float: right;
+}
+
+#nav-nextpost:hover,
+#nav-prevpost:hover {
+	cursor: pointer;
+}
+
+div.navigation {
+	clear: both;
+	margin-bottom: 22px;
+	position: relative;
+	z-index: 600;
+}
+
+
 
 /*-----------------------------------------------------------------------------
 4.0 - Backgrounds and colors
@@ -646,6 +722,22 @@ article .in-series p a {
 	color: #666;
 }
 
+/* Previous/Next Navigation */
+#nav-prevnext {
+	background: url('../images/prevnextarrows.png') center 30px no-repeat;
+}
+
+#nav-prevpost,
+#nav-nextpost {
+	background: #f8f8f8;
+	border: 1px solid #eee;
+}
+
+#nav-nextpost:hover a,
+#nav-prevpost:hover a {
+	color: #25a8e0;
+}
+
 
 /*-----------------------------------------------------------------------------
 5.0 - Typography
@@ -754,6 +846,18 @@ nav ul {
 /* Content */
 article .in-series p {
 	font-family: Georgia, Garamond, Times, serif;
+}
+
+/* Previous/Next Navigation */
+#nav-prevpost,
+#nav-nextpost {
+	font-size: 11px;
+	line-height: 18px;
+}
+
+#nav-prevpost a,
+#nav-nextpost a {
+	text-decoration: none;
 }
 
 
