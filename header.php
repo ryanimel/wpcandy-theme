@@ -43,6 +43,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<nav role="navigation" class="site-navigation brand-navigation">
+	<div class="wrap">
+		<h1 class="assistive-text"><?php _e( 'Menu', 'wpcandy_theme' ); ?></h1>
+		<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wpcandy_theme' ); ?>"><?php _e( 'Skip to content', 'wpcandy_theme' ); ?></a></div>
+
+		<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
+	</div><!-- .wrap -->
+</nav><!-- .site-navigation .main-navigation -->
+
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">

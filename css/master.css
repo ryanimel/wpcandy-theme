@@ -67,7 +67,32 @@ footer, header, hgroup, menu, nav, section, summary {
 
 
 /*-----------------------------------------------------------------------------
-2.0 - Dimensions, margins/paddings and positioning
+2.0 - Margins/paddings and positioning
+-----------------------------------------------------------------------------*/
+
+#page {
+	width: 978px;
+}
+
+/* Logo */
+.site-title a {
+	width: 231px;
+}
+
+/* Navigation */
+.main-navigation,
+.main-small-navigation,
+.brand-navigation {
+	width: 100%;
+}
+
+.brand-navigation .wrap {
+	width: 570px;
+}
+
+
+/*-----------------------------------------------------------------------------
+3.0 - Margins/paddings and positioning
 -----------------------------------------------------------------------------*/
 
 body {
@@ -76,7 +101,6 @@ body {
 
 #page {
 	margin: 0 auto;
-	width: 978px;
 }
 
 /* Logo */
@@ -84,7 +108,6 @@ body {
 	display: block;
 	height: 117px;
 	position: relative;
-	width: 231px;
 	z-index: 100;
 }
 
@@ -100,12 +123,46 @@ body {
 	border: 1px solid #ccc;
 	border-bottom: none;
 	margin: 0 auto;
-	width: 100%;
+}
+
+/* Brand Bar */	
+.brand-navigation {
+	border-bottom: 3px solid #333;
+	height: 30px;
+	margin-bottom: -10px;
+	margin-right: 0;
+}
+
+.brand-navigation .wrap {
+	margin: 0 auto;
+}
+
+.brand-navigation li {
+	float: left;
+	margin: 0 50px 0 0;
+}
+
+.brand-navigation li.last {
+	margin-right: 0;
+}
+
+.brand-navigation a {
+	display: block;
+	padding: 0 0 0 25px;
+}
+
+.brand-navigation li.pros a {
+	padding-left: 38px;
+}
+
+.brand-navigation li.blog a,
+.brand-navigation li.quarterly a {
+	padding-left: 30px;
 }
 
 
 /*-----------------------------------------------------------------------------
-3.0 - Backgrounds and colors
+4.0 - Backgrounds and colors
 -----------------------------------------------------------------------------*/
 
 body {
@@ -138,9 +195,62 @@ a:hover {
 	background: #333;
 }
 
+.brand-navigation {
+	background: url('../images/brandbar4.gif') left top repeat;
+}
+
+.brand-navigation li:hover {
+	background: url('../images/brandbar-hover4.gif') center bottom no-repeat;
+}
+
+.brand-navigation a {
+	color: #003366;
+}
+
+.brand-navigation li.stream a {
+	background: url('../images/brandbar-icons2.png') left 6px no-repeat;
+}
+
+.brand-navigation li.stream a:hover {
+	background: url('../images/brandbar-icons2.png') left -22px no-repeat;
+}
+
+.brand-navigation li.pros a {
+	background: url('../images/brandbar-icons2.png') left -51px no-repeat;
+}
+
+.brand-navigation li.pros a:hover {
+	background: url('../images/brandbar-icons2.png') left -79px no-repeat;
+}
+
+.brand-navigation li.blog a {
+	background: url('../images/brandbar-icons2.png') left -107px no-repeat;
+}
+
+.brand-navigation li.blog a:hover {
+	background: url('../images/brandbar-icons2.png') left -137px no-repeat;
+}
+
+.brand-navigation li.blog {
+	background: url('../images/brandbar-hover4.gif') center bottom no-repeat;
+}
+
+.brand-navigation li.quarterly a {
+	background: url('../images/brandbar-icons2.png') left -167px no-repeat;
+}
+
+.brand-navigation li.quarterly a:hover {
+	background: url('../images/brandbar-icons2.png') left -198px no-repeat;
+}
+
+.brand-navigation a:hover {
+	color: #fff;
+}
+
+
 
 /*-----------------------------------------------------------------------------
-4.0 - Typography
+5.0 - Typography
 -----------------------------------------------------------------------------*/
 
 body {
@@ -189,6 +299,22 @@ h3 {
 
 h4 { 
 	font-size: 17px;
+}
+
+/* Navigation */
+.site-navigation ul {
+	list-style-type: none;
+}
+
+.brand-navigation li {
+	font-size: 12px;
+	line-height: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.brand-navigation a {
+	text-decoration: none;
 }
 
 
