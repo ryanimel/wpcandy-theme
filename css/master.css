@@ -70,7 +70,8 @@ footer, header, hgroup, menu, nav, section, summary {
 2.0 - Width
 -----------------------------------------------------------------------------*/
 
-#page {
+#page,
+#show-header {
 	width: 978px;
 }
 
@@ -86,14 +87,53 @@ footer, header, hgroup, menu, nav, section, summary {
 	width: 100%;
 }
 
-.brand-navigation .wrap {
-	width: 570px;
+.brand-navigation .wrap,
+/* Post navigation */
+.navigation {
+	width: 580px;
+}
+
+.main-navigation .menu ul,
+.main-navigation .menu ul li {
+	width: 180px;
+}
+
+.main-navigation .menu ul a {
+	width: 160px;
+}
+
+.main-navigation li.twitter a,
+.main-navigation li.facebook a,
+.main-navigation li.rss a {
+	width: 16px;
 }
 
 /* Default WordPress styles */
 .wp-caption,
 .wp-caption img {
 	max-width: 100% !important;
+}
+
+/* Content */
+div.entry-content object,
+div.entry-content embed,
+div.entry-content iframe,
+div.entry-content .vvqbox,
+div.entry-content .embed-youtube,
+div.entry-content .embed-youtube iframe {
+	max-width: 600px;
+}
+
+article .in-series p {
+	width: 450px;
+}
+
+article header .main {
+	width: 525px;
+}
+
+div.content-cats {
+	width: 48px;
 }
 
 
@@ -129,6 +169,108 @@ body {
 	border: 1px solid #ccc;
 	border-bottom: none;
 	margin: 0 auto;
+	padding-bottom: 6px;
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+}
+
+.main-small-navigation .menu {
+	display: none;
+}
+
+.main-navigation .menu {
+	margin: 0 0 0 15px;
+	padding: 6px 0;
+}
+
+.main-navigation .menu li {
+	float: left;
+	margin-right: 6px;
+	position: relative;
+}
+
+.main-navigation .menu {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.main-navigation .menu li {
+	line-height: 0;
+}
+	
+.main-navigation .menu a {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+	display: block;
+	padding: 0 10px;
+}
+
+.main-navigation .menu a {
+	line-height: 28px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.main-navigation .menu li.rss a,
+.main-navigation .menu li.twitter a,
+.main-navigation .menu li.facebook a {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-khtml-border-radius: 0;
+	border-radius: 0;
+}
+	
+.main-navigation .menu {
+	list-style: none;
+	margin-bottom: 0;
+}
+	
+.main-navigation .menu ul {
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 0;
+	float: left;
+	z-index: 99999;
+}
+
+.main-navigation .menu ul ul {
+	left: 100%;
+	top: 0;
+}
+	
+.main-navigation .menu ul a {
+	padding: 10px 10px 9px 10px;
+	height: auto;
+}
+	
+.main-navigation .menu li:hover > ul {
+	display: block;
+}
+
+.main-navigation li.twitter,
+.main-navigation li.facebook,
+.main-navigation li.rss {
+	float: right !important;
+	margin-left: 5px;
+}
+
+.main-navigation li.facebook {
+	margin-right: 20px !important;
+}
+
+.main-navigation li.twitter a,
+.main-navigation li.facebook a,
+.main-navigation li.rss a {
+	display: block;
+	height: 16px;
+	margin-top: 5px;
+	padding: 0;
 }
 
 /* Brand Bar */	
@@ -218,6 +360,34 @@ div.aligncenter {
 	padding: 3px 0 3px 0;
 }
 
+.clear {
+	clear: both;
+}
+
+/* Lists */
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+/* Post navigation */
+.navigation {
+	float: left;
+	padding: 11px;
+}
+	
+.navigation .nav-next {
+	float: right;
+}
+	
+.navigation a {
+	display: block;
+	float: left;
+	padding: 8px 12px;
+}
+
 
 /*-----------------------------------------------------------------------------
 4.0 - Backgrounds and colors
@@ -230,7 +400,6 @@ body {
 
 .site-title a {
 	background: url('../images/wpcandy-sprite.png') left top no-repeat;
-	text-indent: -999em;
 }
 
 /* Links */
@@ -251,6 +420,52 @@ a:hover {
 .main-navigation,
 .main-small-navigation {
 	background: #333;
+}
+
+.main-navigation .menu a {
+	color: #efefef;
+}
+
+.main-navigation .menu a:hover {
+	background: #111;
+}
+
+.main-navigation .menu li.current-menu-item a,
+.main-navigation .menu li.current-page-ancestor a,
+.bbPress .main-navigation .menu li.community a {
+	background: #111;
+	color: #fff;
+}
+
+.main-navigation .menu ul a {
+	background: #333;
+}
+
+.main-navigation .menu li.current_page_item > a,
+.main-navigation .menu li.current-menu-ancestor > a,
+.main-navigation .menu li.current-menu-item > a,
+.main-navigation .menu li.current-menu-parent > a,
+* html .main-navigation .menu li.current_page_item a,
+* html .main-navigation .menu li.current-menu-ancestor a,
+* html .main-navigation .menu li.current-menu-item a,
+* html .main-navigation .menu li.current-menu-parent a,
+* html .main-navigation .menu li a:hover {
+	color: #fff;
+}
+
+.main-navigation li.twitter a,
+.main-navigation li.twitter a:hover {
+	background: url('../images/wpcandy-sprite.png') -311px -36px no-repeat;
+}
+	
+.main-navigation li.facebook a,
+.main-navigation li.facebook a:hover {
+	background: url('../images/wpcandy-sprite.png') -327px -36px no-repeat;
+}
+	
+.main-navigation li.rss a,
+.main-navigation li.rss a:hover {
+	background: url('../images/wpcandy-sprite.png') -343px -36px no-repeat;
 }
 
 .brand-navigation {
@@ -314,10 +529,121 @@ a:hover {
 .wp-caption {
 	background: none;
 }
+
 .wp-caption p.wp-caption-text {
 	color: #333;
 }
 
+/* Content categories */
+div.content-cats li.tag a {
+	background: #25a8e0;
+}
+
+div.content-cats li.news a {
+	background: #262626 url('../images/wpcandy-sprite.png') -49px -302px no-repeat;
+}
+
+div.content-cats li.tutorials a {
+	background: #262626 url('../images/wpcandy-sprite.png') -97px -302px no-repeat;
+}
+
+div.content-cats li.interviews a {
+	background: #262626 url('../images/wpcandy-sprite.png') -145px -302px no-repeat;
+}
+
+div.content-cats li.opinion a {
+	background: #262626 url('../images/wpcandy-sprite.png') -193px -302px no-repeat;
+}
+	
+div.content-cats li.reviews a {
+	background: #262626 url('../images/wpcandy-sprite.png') -241px -302px no-repeat;
+}
+	
+div.content-cats li.podcasts a {
+	background: #262626 url('../images/wpcandy-sprite.png') -289px -302px no-repeat;
+}
+	
+div.content-cats li.features a {
+	background: #262626 url('../images/wpcandy-sprite.png') -337px -302px no-repeat;
+}
+	
+div.content-cats li.links a {
+	background: #262626 url('../images/wpcandy-sprite.png') -385px -302px no-repeat;
+}
+	
+div.content-cats li.giveaways a {
+	background: #262626 url('../images/wpcandy-sprite.png') -433px -302px no-repeat;
+}
+	
+div.content-cats li.downloads a {
+	background: #262626 url('../images/wpcandy-sprite.png') -481px -302px no-repeat;
+}
+	
+div.content-cats li.videos a {
+	background: #262626 url('../images/wpcandy-sprite.png') -529px -302px no-repeat;
+}
+	
+div.content-cats li.sites a {
+	background: #262626 url('../images/wpcandy-sprite.png') -577px -302px no-repeat;
+}
+	
+div.content-cats li.bestof a {
+	background: #262626 url('../images/wpcandy-sprite.png') -625px -302px no-repeat;
+}
+	
+div.content-cats li.preview a {
+	background: #262626 url('../images/wpcandy-sprite.png') -669px -302px no-repeat;
+}
+	
+div.content-cats li.liveblogged a {
+	background: #262626 url('../images/wpcandy-sprite.png') -717px -302px no-repeat;
+}
+	
+div.content-cats li.broadcasts a {
+	background: #262626 url('../images/wpcandy-sprite.png') -769px -302px no-repeat;
+}
+
+div.content-cats li.announcements a {
+	background: #262626 url('../images/wpcandy-sprite.png') -1px -302px no-repeat;
+}
+
+div.content-cats li.photos {
+	background: #262626 url('../images/wpcandy-sprite.png') -817px -302px no-repeat;
+	color: #fff;
+}
+
+div.content-cats li.tag a:hover,
+div.content-cats li.announcements a:hover,
+div.content-cats li.news a:hover,
+div.content-cats li.tutorials a:hover,
+div.content-cats li.interviews a:hover,
+div.content-cats li.opinion a:hover,
+div.content-cats li.reviews a:hover,
+div.content-cats li.podcasts a:hover,
+div.content-cats li.features a:hover,
+div.content-cats li.links a:hover,
+div.content-cats li.giveaways a:hover,
+div.content-cats li.downloads a:hover,
+div.content-cats li.videos a:hover,
+div.content-cats li.sites a:hover,
+div.content-cats li.bestof a:hover,
+div.content-cats li.preview a:hover {
+	background-color: #111;
+}
+
+#content {
+	border-right: 1px solid #eee;
+}
+
+#main .wrap {
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+
+article .in-series p,
+article .in-series p a {
+	color: #666;
+}
 
 
 /*-----------------------------------------------------------------------------
@@ -372,11 +698,15 @@ h4 {
 	font-size: 17px;
 }
 
-/* Navigation */
-.site-navigation ul {
-	list-style-type: none;
+/* Text indent */
+.site-title a,
+.main-navigation li.twitter a,
+.main-navigation li.facebook a,
+.main-navigation li.rss a {
+	text-indent: -999em;
 }
 
+/* Navigation */
 .brand-navigation li {
 	font-size: 12px;
 	line-height: 30px;
@@ -384,7 +714,9 @@ h4 {
 	font-weight: bold;
 }
 
-.brand-navigation a {
+.brand-navigation a,
+/* Post navigation */
+.navigation a {
 	text-decoration: none;
 }
 
@@ -404,7 +736,23 @@ h4 {
 	text-align: left;
 }
 
+/* Lists */
+ul { 
+	list-style: disc;
+}
 
+ol { 
+	list-style: decimal;
+}
 
+/* Removes the bullets in nav menus */
+nav ul { 
+	list-style: none;
+}
+
+/* Content */
+article .in-series p {
+	font-family: Georgia, Garamond, Times, serif;
+}
 
 

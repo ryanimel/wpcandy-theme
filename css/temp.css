@@ -5,9 +5,6 @@
 2.0 - Global Elements
 -----------------------------------------------------------------------------*/
 
-
-
-
 mark { 
 	background-color: #ff9; 
 	color: #000; 
@@ -89,43 +86,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: #000;
 }
 
-#site-title,
-#site-navigation .nav-menu,
-#site-topics,
-.entry-title,
-.entry-meta,
-.entry-utility,
-.widget-title,
-.comment-form-author,
-.comment-form-email,
-.comment-form-url,
-.comment-form-comment,
-.form-allowed-tags,
-input[type="submit"],
-#reply-title,
-#comments-title,
-.comment-meta,
-.reply,
-#site-info,
-#site-credits,
-#content, 
-aside,
-input, 
-textarea,
-div#breadcrumbs {
-	
-}
-
-#site-credits,
-#site-description {
-	font-style: italic;
-}
-
-
-
-
-
-
 #site-title, #site-title a, .entry-title a, .entry-title,
 .page-title a {
 	color: #000;
@@ -199,13 +159,6 @@ ul {
 
 ol {
 	list-style: decimal;
-}
-
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-	margin-bottom: 0;
 }
 
 dt {
@@ -743,224 +696,6 @@ p.comment-subscription-form label {
 
 
 /*-----------------------------------------------------------------------------
-2.3 - Default WordPress CSS
------------------------------------------------------------------------------*/
-
-
-	
-	
-/*-----------------------------------------------------------------------------
-3.0 - Header
------------------------------------------------------------------------------*/
-
-#branding {
-	padding-top: 44px;
-	position: relative;
-	width: 100% !important;
-}
-
-
-
-
-/*-----------------------------------------------------------------------------
-5.0 - Site Navigation
------------------------------------------------------------------------------*/
-
-/* Small menu */
-.menu-toggle {
-	cursor: pointer;
-}
-
-.main-small-navigation .menu {
-	display: none;
-}
-
-ul { 
-	list-style: disc;
-}
-
-ol { 
-	list-style: decimal;
-}
-
-/* Removes the bullets in nav menus */
-nav ul { 
-	list-style: none;
-}
-
-
-	
-#site-navigation .nav-menu {
-	font-size: 14px;
-	line-height: 18px;
-	margin: 0 0 0 15px;
-	padding: 6px 0;
-}
-
-#site-navigation .wrap {
-	width: 978px;
-}
-	
-#site-navigation .nav-menu ul li {
-	float: left;
-	line-height: 0;
-	margin-right: 6px;
-	position: relative;
-}
-	
-#site-navigation .nav-menu ul a {
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-khtml-border-radius: 10px;
-	border-radius: 10px;
-	color: #efefef;
-	display: block;
-	line-height: 28px;
-	padding: 0 10px;
-	text-decoration: none;
-	text-transform: capitalize;
-}
-
-#site-navigation .nav-menu ul li.rss a,
-#site-navigation .nav-menu ul li.twitter a,
-#site-navigation .nav-menu ul li.facebook a {
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	-khtml-border-radius: 0;
-	border-radius: 0;
-}
-	
-#site-navigation .nav-menu ul a:hover {
-	background: #111;
-}
-
-#site-navigation .nav-menu li.current-menu-item a,
-#site-navigation .nav-menu li.current-page-ancestor a,
-.bbPress #site-navigation .nav-menu li.community a {
-	background: #111;
-	color: #fff;
-}
-	
-#site-navigation .nav-menu ul {
-	list-style: none;
-	margin-bottom: 0;
-}
-	
-#site-navigation .nav-menu ul ul {
-	display: none;
-	position: absolute;
-	top: 38px;
-	left: 0;
-	float: left;
-	width: 180px;
-	z-index: 99999;
-}
-	
-#site-navigation .nav-menu ul ul li {
-	min-width: 180px;
-}
-
-#site-navigation .nav-menu ul ul ul {
-	left: 100%;
-	top: 0;
-}
-	
-#site-navigation .nav-menu ul ul a {
-	background: #333; /*
-	line-height: 1em; */
-	padding: 10px 10px 9px 10px;
-	width: 160px;
-	height: auto;
-}
-	
-#site-navigation .nav-menu ul li:hover > ul {
-	display: block;
-}
-	
-#site-navigation .nav-menu ul li.current_page_item > a,
-#site-navigation .nav-menu ul li.current-menu-ancestor > a,
-#site-navigation .nav-menu ul li.current-menu-item > a,
-#site-navigation .nav-menu ul li.current-menu-parent > a {
-	color: #fff;
-}
-
-* html #site-navigation .nav-menu ul li.current_page_item a,
-* html #site-navigation .nav-menu ul li.current-menu-ancestor a,
-* html #site-navigation .nav-menu ul li.current-menu-item a,
-* html #site-navigation .nav-menu ul li.current-menu-parent a,
-* html #site-navigation .nav-menu ul li a:hover {
-	color: #fff;
-}
-	
-	
-/*-----------------------------------------------------------------------------
-5.1 - Social Navigation
------------------------------------------------------------------------------*/
-	
-#site-navigation li.twitter,
-#site-navigation li.facebook,
-#site-navigation li.rss {
-	float: right !important;
-	margin-left: 5px;
-}
-
-#site-navigation li.facebook {
-	margin-right: 20px !important;
-}
-	
-#site-navigation li.twitter a,
-#site-navigation li.facebook a,
-#site-navigation li.rss a {
-	display: block;
-	height: 16px;
-	margin-top: 5px;
-	padding: 0;
-	text-indent: -999em;
-	width: 16px;
-}
-	
-#site-navigation li.twitter a,
-#site-navigation li.twitter a:hover {
-	background: url('../images/wpcandy-sprite.png') -311px -36px no-repeat;
-}
-	
-#site-navigation li.facebook a,
-#site-navigation li.facebook a:hover {
-	background: url('../images/wpcandy-sprite.png') -327px -36px no-repeat;
-}
-	
-#site-navigation li.rss a,
-#site-navigation li.rss a:hover {
-	background: url('../images/wpcandy-sprite.png') -343px -36px no-repeat;
-}
-
-
-/*-----------------------------------------------------------------------------
-5.2 - Post Navigation
------------------------------------------------------------------------------*/
-	
-.navigation {
-	background: #eee;
-	float: left;
-	padding: 11px;
-	width: 580px;
-}
-	
-.navigation .nav-next {
-	float: right;
-}
-	
-.navigation a {
-	background: #25A8E0;
-	color: #fff;
-	display: block;
-	float: left;
-	padding: 8px 12px;
-	text-decoration: none;
-}
-
-
-/*-----------------------------------------------------------------------------
 5.3 - Previous/Next Navigation
 -----------------------------------------------------------------------------*/
 	
@@ -1042,7 +777,6 @@ div.navigation {
 -----------------------------------------------------------------------------*/
 	
 #content {
-	border-right: 1px solid #eee;
 	margin-left: 25px;
 	margin-right: 0;
 	padding-right: 25px;
@@ -1054,15 +788,8 @@ div.navigation {
 	margin-top: 0;
 }
 
-#main .wrap {
-	width: 998px;
-	border-right: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-}
-
 #page {
 	margin: 0 auto;
-	width: 998px;
 }
 	
 article {
@@ -1076,21 +803,13 @@ article .entry-title {
 	clear: none;
 	margin-bottom: 0 !important;
 }
-	
+
 article .in-series p {
-	font-family: Georgia, Garamond, Times, serif;
 	margin: 2px 0 -2px 0;
-	width: 450px;
-}
-	
-article .in-series p,
-article .in-series p a {
-	color: #666;
 }
 	
 article header .main {
 	float: left;
-	width: 525px;
 }
 	
 article .date-long {
@@ -1103,10 +822,13 @@ div.entry-meta .date-long {
 }
 	
 div.entry-meta p.count {
-	font-size: 14px;
 	position: absolute;
 	right: 0;
 	top: 10px;
+}
+
+div.entry-meta p.count {
+	font-size: 14px;
 }
 
 div.entry-meta p.count span.emInfo {
@@ -1114,150 +836,79 @@ div.entry-meta p.count span.emInfo {
 }
 	
 div.entry-meta p.count a {
-	background: #7d7d7d;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-khtml-border-radius: 10px;
 	border-radius: 10px;
-	color: #fff;
 	padding: 3px 12px;
+}
+
+div.entry-meta p.count a {
+	text-decoration: none;
+}
+
+div.entry-meta p.count a {
+	background: #7d7d7d;
+	color: #fff;
+}
+
+div.entry-meta p.count a:hover {
 	text-decoration: none;
 }
 
 div.entry-meta p.count a:hover {
 	background: #000;
-	text-decoration: none;
 }
-	
+
 div.content-cats {
 	float: left;
-	font-size: 9px;
 	margin-bottom: 0;
 	margin-right: 12px;
 	margin-top: 7px;
+}
+
+div.content-cats {
+	font-size: 9px;
 	text-align: center;
 	text-transform: uppercase;
-	width: 48px;
 }
-	
+
 div.content-cats li {
 	list-style-type: none;
+}
+
+div.content-cats li {
 	margin-bottom: 1px;
 }
-	
+
 div.content-cats li a {
 	background-color: #262626;
 	color: #fff;
-	display: block;
-	padding-top: 44px;
-	text-decoration: none;
-}
-	
-div.content-cats li.announcements a {
-	background: #262626 url('../images/wpcandy-sprite.png') -1px -302px no-repeat;
-}
-	
-div.content-cats li.photos {
-	background: #262626 url('../images/wpcandy-sprite.png') -817px -302px no-repeat;
-	color: #fff;
-	padding-top: 44px;
-}
-	
-div.content-cats li.news a {
-	background: #262626 url('../images/wpcandy-sprite.png') -49px -302px no-repeat;
 }
 
-div.content-cats li.tutorials a {
-	background: #262626 url('../images/wpcandy-sprite.png') -97px -302px no-repeat;
+div.content-cats li a {
+	display: block;
+	padding-top: 44px;
 }
-	
-div.content-cats li.interviews a {
-	background: #262626 url('../images/wpcandy-sprite.png') -145px -302px no-repeat;
+
+div.content-cats li a {
+	text-decoration: none;
 }
-	
-div.content-cats li.opinion a {
-	background: #262626 url('../images/wpcandy-sprite.png') -193px -302px no-repeat;
-}
-	
-div.content-cats li.reviews a {
-	background: #262626 url('../images/wpcandy-sprite.png') -241px -302px no-repeat;
-}
-	
-div.content-cats li.podcasts a {
-	background: #262626 url('../images/wpcandy-sprite.png') -289px -302px no-repeat;
-}
-	
-div.content-cats li.features a {
-	background: #262626 url('../images/wpcandy-sprite.png') -337px -302px no-repeat;
-}
-	
-div.content-cats li.links a {
-	background: #262626 url('../images/wpcandy-sprite.png') -385px -302px no-repeat;
-}
-	
-div.content-cats li.giveaways a {
-	background: #262626 url('../images/wpcandy-sprite.png') -433px -302px no-repeat;
-}
-	
-div.content-cats li.downloads a {
-	background: #262626 url('../images/wpcandy-sprite.png') -481px -302px no-repeat;
-}
-	
-div.content-cats li.videos a {
-	background: #262626 url('../images/wpcandy-sprite.png') -529px -302px no-repeat;
-}
-	
-div.content-cats li.sites a {
-	background: #262626 url('../images/wpcandy-sprite.png') -577px -302px no-repeat;
-}
-	
-div.content-cats li.bestof a {
-	background: #262626 url('../images/wpcandy-sprite.png') -625px -302px no-repeat;
-}
-	
-div.content-cats li.preview a {
-	background: #262626 url('../images/wpcandy-sprite.png') -669px -302px no-repeat;
-}
-	
-div.content-cats li.liveblogged a {
-	background: #262626 url('../images/wpcandy-sprite.png') -717px -302px no-repeat;
-}
-	
-div.content-cats li.broadcasts a {
-	background: #262626 url('../images/wpcandy-sprite.png') -769px -302px no-repeat;
+
+div.content-cats li.photos {
+	padding-top: 44px;
 }
 	
 div.content-cats li.tag {
 	line-height: 16px;
 }
-	
+
 div.content-cats li.tag a {
-	background: #25a8e0;
 	padding: 0;
-}
-	
-div.content-cats li.tag a:hover,
-div.content-cats li.announcements a:hover,
-div.content-cats li.news a:hover,
-div.content-cats li.tutorials a:hover,
-div.content-cats li.interviews a:hover,
-div.content-cats li.opinion a:hover,
-div.content-cats li.reviews a:hover,
-div.content-cats li.podcasts a:hover,
-div.content-cats li.features a:hover,
-div.content-cats li.links a:hover,
-div.content-cats li.giveaways a:hover,
-div.content-cats li.downloads a:hover,
-div.content-cats li.videos a:hover,
-div.content-cats li.sites a:hover,
-div.content-cats li.bestof a:hover,
-div.content-cats li.preview a:hover {
-	background-color: #111;
 }
 
 #show-header {
 	margin: 0 auto;
-	width: 978px;
 }
 
 #show-header .main {
@@ -1267,15 +918,6 @@ div.content-cats li.preview a:hover {
 	
 div.entry-content {
 	clear: both;
-}
-
-div.entry-content object,
-div.entry-content embed,
-div.entry-content iframe,
-div.entry-content .vvqbox,
-div.entry-content .embed-youtube,
-div.entry-content .embed-youtube iframe {
-	max-width: 600px;
 }
 
 .footnotes {
