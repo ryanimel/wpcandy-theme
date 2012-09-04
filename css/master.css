@@ -6,7 +6,7 @@ you likely won't see unless you're looking for it.
 
 
 /*-----------------------------------------------------------------------------
-1.0 - Defaults
+1.0 - Reset
 -----------------------------------------------------------------------------*/
 
 /* Resets all HTML5 tags */
@@ -713,7 +713,7 @@ div.content-cats li.preview a:hover {
 	border-left: 1px solid #ccc;
 }
 
-#primary {
+#content {
 	border-right: 1px solid #eee;
 }
 
