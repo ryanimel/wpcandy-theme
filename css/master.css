@@ -113,6 +113,10 @@ footer, header, hgroup, menu, nav, section, summary {
 }
 
 /* Content */
+#primary { 
+	width: 600px;
+}
+
 div.entry-content object,
 div.entry-content embed,
 div.entry-content iframe,
@@ -147,6 +151,11 @@ div.content-cats {
 #nav-nextpost a,
 #nav-prevpost a {
 	width: 155px;
+}
+
+/* Sidebar */
+#secondary {
+	width: 325px;
 }
 
 
@@ -406,6 +415,12 @@ ol ul {
 	position: relative;
 }
 
+#primary {
+	float: left;
+	margin: 0;
+	padding: 22px 25px 22px 25px;
+}
+
 /* Previous/Next Navigation */
 #nav-prevnext {
 	clear: both;
@@ -466,6 +481,14 @@ div.navigation {
 	z-index: 600;
 }
 
+/* Sidebar */
+#secondary {
+	float: right;
+	margin-bottom: 30px;
+	margin-right: 0;
+	overflow: hidden;
+	padding-top: 0;
+}
 
 
 /*-----------------------------------------------------------------------------
@@ -713,13 +736,18 @@ div.content-cats li.preview a:hover {
 	border-left: 1px solid #ccc;
 }
 
-#content {
+#primary {
 	border-right: 1px solid #eee;
 }
 
 article .in-series p,
 article .in-series p a {
 	color: #666;
+}
+
+/* Sidebar */
+#secondary {
+
 }
 
 /* Previous/Next Navigation */
@@ -1566,13 +1594,6 @@ p.comment-subscription-form label {
 /*-----------------------------------------------------------------------------
 7.0 - Content
 -----------------------------------------------------------------------------*/
-	
-#content {
-	margin-left: 25px;
-	margin-right: 0;
-	padding-right: 25px;
-	padding-top: 22px;
-}
 	
 #main {
 	clear: both;
@@ -3750,14 +3771,6 @@ section#text-12 p {
 	line-height: 18px;
 	margin-bottom: 11px;
 }
-
-#sidebar {
-	margin-bottom: 30px;
-	margin-right: 0;
-	overflow: hidden;
-	padding-top: 0;
-	width: 345px;
-}	
 
 #sidebar h3 {
 	margin-bottom: 14px;
@@ -7254,10 +7267,6 @@ FYI: This grid has 12 column(s), each spanning 54px wide, with 30px gutters.
 .column-7 { 
 	width: 558px;
 } 
-
-.column-8 { 
-	width: 642px;
-}
 
 .column-8 { 
 	width: 602px;

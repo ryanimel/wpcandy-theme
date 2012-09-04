@@ -8,7 +8,7 @@
  * @since WPCandy Theme 1.0
  */
 ?>
-
+		<div class="clear"></div>
 	</div><!-- #main .site-main -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
