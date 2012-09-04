@@ -123,49 +123,6 @@ div#breadcrumbs {
 
 
 
-/* Verdical Rhythm */
-#site-title,
-#site-search,
-#site-topics,
-.page-title,
-.entry-meta,
-.entry-utility,
-#sidebar section,
-#reply-title,
-.comment-meta,
-.comment-list .comment,
-.reply,
-#comments-title,
-#content h1,
-#content h2,
-#content h3,
-#content h4,
-#content h5,
-#content h6,
-p, pre, ol, ul, dl, dd {
-	margin-bottom: 22px;
-}
-
-/*.comment-list, .children,
-.comment-content,*/
-.entry-content, .entry-summary,
-.gallery .gallery-caption,
-.gallery, .wp-caption,
-img.alignleft,
-img.alignright,
-img.aligncenter {
-	margin-top: 22px;
-}
-
-#respond {
-	padding-top: 22px;
-}
-
-.entry-content ul, .entry-content ol,
-.entry-summary ul, .entry-summary ol,
-#sidebar ul, #sidebar ol {
-	margin-left: 25px;
-}
 
 
 
@@ -789,64 +746,7 @@ p.comment-subscription-form label {
 2.3 - Default WordPress CSS
 -----------------------------------------------------------------------------*/
 
-.aligncenter, 
-div.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
 
-.alignleft {
-	float: left;
-}
-
-.alignright {
-	float: right;
-}
-
-.alignleft {
-	margin: 0 15px 15px 0;
-}
-
-.alignright {
-	margin: 0 0 15px 35px;
-}
-
-.wp-caption {
-	background-color: #f3f3f3;
-	border: 1px solid #ddd;
-	max-width: 100% !important;
-	padding-top: 4px;
-	text-align: center;
-}
-
-.wp-caption img {
-	border: 0 none;
-	margin: 0;
-	max-width: 100% !important;
-	padding: 0;
-}
-	
-.wp-caption p.wp-caption-text {
-	font-size: 11px;
-	line-height: 17px;
-	margin: 0;
-	padding: 0 4px 5px;
-}
-
-.wp-caption {
-	background: none;
-	border: none;
-	margin-bottom: 15px;
-	padding: 0;
-}
-.wp-caption p.wp-caption-text {
-	color: #333;
-	font-size: 11px;
-	line-height: 18px;
-	padding: 3px 0 3px 0;
-	text-align: left;
-}
 	
 	
 /*-----------------------------------------------------------------------------

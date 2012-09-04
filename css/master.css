@@ -67,7 +67,7 @@ footer, header, hgroup, menu, nav, section, summary {
 
 
 /*-----------------------------------------------------------------------------
-2.0 - Margins/paddings and positioning
+2.0 - Width
 -----------------------------------------------------------------------------*/
 
 #page {
@@ -88,6 +88,12 @@ footer, header, hgroup, menu, nav, section, summary {
 
 .brand-navigation .wrap {
 	width: 570px;
+}
+
+/* Default WordPress styles */
+.wp-caption,
+.wp-caption img {
+	max-width: 100% !important;
 }
 
 
@@ -158,6 +164,58 @@ body {
 .brand-navigation li.blog a,
 .brand-navigation li.quarterly a {
 	padding-left: 30px;
+}
+
+/* Default WordPress styles */
+.wp-caption {
+	padding-top: 4px;
+}
+
+.aligncenter, 
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	margin: 0 15px 15px 0;
+}
+
+.alignright {
+	margin: 0 0 15px 35px;
+}
+
+.wp-caption {
+	padding-top: 4px;
+}
+
+.wp-caption img {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+	
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+.wp-caption {
+	border: none;
+	margin-bottom: 15px;
+	padding: 0;
+}
+.wp-caption p.wp-caption-text {
+	padding: 3px 0 3px 0;
 }
 
 
@@ -247,6 +305,19 @@ a:hover {
 	color: #fff;
 }
 
+/* Default WordPress styles */
+.wp-caption {
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+}
+
+.wp-caption {
+	background: none;
+}
+.wp-caption p.wp-caption-text {
+	color: #333;
+}
+
 
 
 /*-----------------------------------------------------------------------------
@@ -316,6 +387,23 @@ h4 {
 .brand-navigation a {
 	text-decoration: none;
 }
+
+/* Default WordPress styles */
+.wp-caption {
+	text-align: center;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 18px;
+	text-align: left;
+}
+
 
 
 
