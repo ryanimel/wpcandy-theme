@@ -449,7 +449,9 @@ a:hover {
 * html .main-navigation .menu li.current-menu-ancestor a,
 * html .main-navigation .menu li.current-menu-item a,
 * html .main-navigation .menu li.current-menu-parent a,
-* html .main-navigation .menu li a:hover {
+* html .main-navigation .menu li a:hover,
+.brand-navigation a:hover,
+div.content-cats li.photos {
 	color: #fff;
 }
 
@@ -514,10 +516,6 @@ a:hover {
 
 .brand-navigation li.quarterly a:hover {
 	background: url('../images/brandbar-icons2.png') left -198px no-repeat;
-}
-
-.brand-navigation a:hover {
-	color: #fff;
 }
 
 /* Default WordPress styles */
@@ -609,7 +607,6 @@ div.content-cats li.announcements a {
 
 div.content-cats li.photos {
 	background: #262626 url('../images/wpcandy-sprite.png') -817px -302px no-repeat;
-	color: #fff;
 }
 
 div.content-cats li.tag a:hover,
