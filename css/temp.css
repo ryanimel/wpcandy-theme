@@ -2579,11 +2579,6 @@ div#featured li:hover .featured-overlay {
 .showgrid {
 	background: none !important;
 }
-	
-#main .wrap {
-	background: #fff;
-	position: relative;
-}
 
 #comments {
 	clear: both;

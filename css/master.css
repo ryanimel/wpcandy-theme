@@ -388,6 +388,11 @@ ol ul {
 	padding: 8px 12px;
 }
 
+/* Content */
+#main {
+	position: relative;
+}
+
 
 /*-----------------------------------------------------------------------------
 4.0 - Backgrounds and colors
@@ -628,13 +633,14 @@ div.content-cats li.preview a:hover {
 	background-color: #111;
 }
 
-#content {
-	border-right: 1px solid #eee;
-}
-
-#main .wrap {
+#main {
+	background: #fff;
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
+}
+
+#content {
+	border-right: 1px solid #eee;
 }
 
 article .in-series p,
