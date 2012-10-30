@@ -160,7 +160,7 @@ div.content-cats {
 
 
 /*-----------------------------------------------------------------------------
-3.0 - Margins/paddings and positioning
+3.0 - Margins, paddings and positioning
 -----------------------------------------------------------------------------*/
 
 body {
@@ -174,7 +174,9 @@ body {
 /* Logo */
 .site-title a {
 	display: block;
+	float: left;
 	height: 117px;
+	margin: 0 0 -6px 0;
 	position: relative;
 	z-index: 100;
 }
@@ -190,6 +192,7 @@ body {
 	border-top-right-radius: 6px;
 	border: 1px solid #ccc;
 	border-bottom: none;
+	clear: both;
 	margin: 0 auto;
 	padding-bottom: 6px;
 }
@@ -931,4 +934,37 @@ ins {
 del { 
 	text-decoration: line-through; 
 }
+
+
+/*-----------------------------------------------------------------------------
+6.0 - Working CSS
+-----------------------------------------------------------------------------*/
+
+/* Typography */
+#description-swap {
+	font-weight: bold;
+	line-height: 18px;
+}
+
+#description-swap span {
+	font-weight: normal;
+	font-size: 12px;
+}
+
+/* Positioning */
+#description-swap {
+	float: left;
+	margin: 45px 0 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
