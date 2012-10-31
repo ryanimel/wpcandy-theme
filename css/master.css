@@ -960,7 +960,18 @@ del {
 
 
 
+#colophon {
+	padding: 35px 0;
+	text-align: center;
+}
 
+#colophon a {
+	color: #000;
+}
+
+#proudly {
+	
+}
 
 
 
