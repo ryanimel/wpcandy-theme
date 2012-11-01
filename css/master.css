@@ -789,6 +789,10 @@ div.entry-content .embed-youtube iframe {
 	max-width: 600px;
 }
 
+.entry-content {
+	clear: both;
+}
+
 article .in-series p {
 	width: 450px;
 }
