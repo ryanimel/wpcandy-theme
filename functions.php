@@ -60,7 +60,7 @@ function wpcandy_theme_setup() {
 	add_editor_style( '/css/editor-style.01.css' );
 
 	// Add support for the Aside Post Formats
-	add_theme_support( 'post-formats', array( 'aside', ) );
+	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 	
 }
 endif; // wpcandy_theme_setup
