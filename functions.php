@@ -49,7 +49,11 @@ function wpcandy_theme_setup() {
 		'tertiary' => __( 'Tertiary Navigation' ),
 		'pros' => __( 'Pros Navigation' ),
 		'quarterly' => __( 'Quarterly Navigation' ),
-		'knapsack' => __( 'Knapsack Navigation' )
+		'knapsack' => __( 'Knapsack Navigation' ),
+		'footer_column_one'	=> __( 'Footer Column #1' ),
+		'footer_column_two'	=> __( 'Footer Column #2' ),
+		'footer_column_three'	=> __( 'Footer Column #3' ),
+		'footer_column_four'	=> __( 'Footer Column #4' )
 	) );
 
 	// Editor Styles support.

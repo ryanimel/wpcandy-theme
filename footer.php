@@ -12,6 +12,27 @@
 	</div><!-- #main .site-main -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		
+		<div id="footer-navigation">
+
+			<div class="first">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer_column_one' ) ); ?>
+			</div><!-- .first -->
+			
+			<div class="second">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer_column_two' ) ); ?>	
+			</div><!-- .second -->
+			
+			<div class="third">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer_column_three' ) ); ?>
+			</div><!-- .third -->
+			
+			<div class="fourth">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer_column_four' ) ); ?>
+			</div><!-- .fourth -->
+
+		</div><!-- #footer-navigation -->
+		
 		<div class="site-info">
 			<?php do_action( 'wpcandy_theme_credits' ); ?>
 			<p id="proudly"><a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'wpcandy_theme' ); ?>" rel="generator"><?php printf( __( 'Proudly powered, of course, by %s', 'wpcandy_theme' ), 'WordPress' ); ?></a></p>
