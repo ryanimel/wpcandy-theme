@@ -975,6 +975,7 @@ div.content-cats li a {
 }
 
 div.content-cats li.tag a {
+	line-height: 14px;
 	padding-top: 0;
 }
 
