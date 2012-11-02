@@ -1569,3 +1569,17 @@ ol ul {
 }
 
 
+/*
+ * Widget styles for Jetpack
+ */
+
+/* Clear floats */
+.jetpack-image-container:after {
+	clear: both;
+}
+.jetpack-image-container:before,
+.jetpack-image-container:after {
+	display: table;
+	content: "";
+}
+

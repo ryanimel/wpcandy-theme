@@ -62,6 +62,9 @@ function wpcandy_theme_setup() {
 	// Add support for the Aside Post Formats
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 	
+	// Remove extra styles added by Jetpack
+	remove_action( 'wp_enqueue_scripts', 'jetpack_widgets_styles' );
+		
 }
 endif; // wpcandy_theme_setup
 add_action( 'after_setup_theme', 'wpcandy_theme_setup' );
