@@ -1583,3 +1583,61 @@ ol ul {
 	content: "";
 }
 
+
+/* Sidebar Stuff */
+#text-24 {
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+	font-size: 12px;
+	padding: 30px 20px 1px;
+}
+
+.widget-container {
+	padding: 20px;
+}
+
+#azk93305 img {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+div.content-cats .photos {
+	display: none;
+}
+
+blockquote {
+	border-left: 6px solid #25A8E0;
+	margin-left: 19px;
+	margin-right: 19px;
+	padding-left: 19px;
+}
+
+blockquote.pullquote,	
+blockquote.jump {
+	border-left: none;
+	float: right;
+	font-family: Georgia, Garamond, serif;
+	font-size: 28px;
+	line-height: 42px;
+	width: 50%;
+}
+
+.pullquote code,
+.jump code {
+	font-size: 22px;
+}
+
+blockquote.roadblock {
+	border-left: none;
+	color: #25A8E0;
+	font-family: 'Helvetica Neue', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 36px;
+	padding-left: 0;
+	text-transform: uppercase;
+}
+
+
+
