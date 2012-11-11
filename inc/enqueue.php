@@ -23,7 +23,7 @@ function wpcandy_theme_scripts() {
 			wp_enqueue_script( 'listnav', get_template_directory_uri() . '/js/listnav.js', array('jquery'), '1.0', true );
 	}
 
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
+	//wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
 	wp_dequeue_script( 'comment-reply' );
 
