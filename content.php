@@ -7,7 +7,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-	<?php get_template_part( 'templates/post', 'taxonomies' ); ?>
+	<?php get_template_part( 'templates/blog', 'taxonomies' ); ?>
 	
 	<header class="entry-header">
 		

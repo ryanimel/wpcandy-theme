@@ -1535,6 +1535,166 @@ ol ul {
 
 
 /*-----------------------------------------------------------------------------
+ Shows Template wpcandy.com/shows
+-----------------------------------------------------------------------------*/
+
+ul#shows-list {
+	margin: 0;
+	padding: 0;
+}
+
+ul#shows-list li {
+	float: left;
+	list-style-type: none;
+	margin: 0 36px 40px 0;
+	width: 280px;
+}
+
+ul#shows-list li p.show-title {
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+ul#shows-list li p.show-title a {
+	color: #333;
+	text-decoration: none;
+}
+
+ul#shows-list li img {
+	border: 1px solid #333;
+	margin: 0 0 10px 0;
+}
+
+ul#shows-list li p.latest-episode {
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+ul#shows-list li p.show-hosts {
+	color: #d3d3d3;
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+ul#shows-list li p.latest-episode a {
+	font-weight: normal;
+}
+
+ul#shows-list li .show-desc {
+	font-size: 13px;
+}
+
+ul#shows-list li .show-desc p {
+	margin-bottom: 12px;
+}
+
+ul#shows-list li.shownum-1,
+ul#shows-list li.shownum-3,
+ul#shows-list li.shownum-5,
+ul#shows-list li.shownum-7,
+ul#shows-list li.shownum-9 {
+	margin-right: 0;
+}
+
+#shows-list .addthis_toolbox {
+	display: none;
+}
+
+/* Shows archive listing */
+div#shows-info img,
+div#archive-info img {
+	float: left;
+	margin-bottom: 22px;
+	margin-right: 22px;
+}
+
+div#shows-info .shows-info-desc {
+	float: right;
+	width: 300px;
+}
+
+div#archive-info .archive-info-desc {
+	float: left;
+	width: 450px;
+}
+
+div#shows-info .shows-info-desc  p {
+	border-bottom: 1px solid #ddd;
+	font-size: 18px;
+	line-height: 27px;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+
+div#shows-info .shows-info-desc p.show-hosts {
+	border-bottom: none;
+	font-size: 14px;
+	line-height: 21px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+div#shows-info .shows-info-desc p.show-hosts strong {
+	display: block;
+}
+
+div#shows-info .shows-info-desc ul {
+	background: #eee;
+	border: 1px solid #ddd;
+	float: left;
+	font-size: 12px;
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+}
+
+div#shows-info .shows-info-desc ul li {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+#archive-info .archive-meta {
+	font-size: 13px;
+}
+
+#shows-info .addthis_toolbox,
+#archive-info .addthis_toolbox {
+	display: none;
+}
+
+#shows-info h2,
+#archive-info h2 {
+	border-left: 10px solid #25A8E0;
+	margin-bottom: 6px;
+	float: left;
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+#shows-info hr,
+#archive-info hr {
+	margin-bottom: 12px;
+}
+
+p#shows-rss-link,
+p#archive-rss-link {
+	float: right;
+	font-size: 12px;
+}
+
+p#shows-rss-link a,
+p#archive-rss-link a {
+	background: url('../images/wpcandy-sprite.png') -343px -36px no-repeat;
+	color: #333;
+	padding: 2px 0 2px 24px;
+	text-decoration: none;
+}
+
+
+
+/*-----------------------------------------------------------------------------
  Footer
 -----------------------------------------------------------------------------*/
 
