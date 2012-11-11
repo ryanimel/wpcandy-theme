@@ -12,18 +12,13 @@
  */ 
 function wpcandy_theme_scripts() {
 	wp_dequeue_style( 'admin-bar' );
-	wp_dequeue_style( 'bp-admin-bar' );
-	wp_dequeue_style( 'bbpress-style' );
 	wp_dequeue_script('cfq');
-	wp_dequeue_style( 'jetpack-carousel' );
 
 	wp_enqueue_style( 'master', get_template_directory_uri() . '/css/master.css', null, '1.3.6.9.9.9.3' );
 
 	if ( is_page( 'coverage' ) ) {
 			wp_enqueue_script( 'listnav', get_template_directory_uri() . '/js/listnav.js', array('jquery'), '1.0', true );
 	}
-
-	//wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
 	wp_dequeue_script( 'comment-reply' );
 
@@ -36,11 +31,8 @@ function wpcandy_theme_scripts() {
 	}
 
 	if ( !in_category( '995' ) ) {
-
 		 wp_dequeue_script( 'live-blogging' );
-
 	}
-
 
 	// Kill WPEC, except on store pages
 	if ( !is_page( 'shoppe' ) && !is_page( 'checkout' ) && !is_page( 'transaction-results' ) && !is_page( 'your-account' ) && !is_post_type_archive( 'wpcandy_issue' ) && !is_singular( 'wpcandy_issue' ) ) {
