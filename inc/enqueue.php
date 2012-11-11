@@ -15,6 +15,7 @@ function wpcandy_theme_scripts() {
 	wp_dequeue_style( 'bp-admin-bar' );
 	wp_dequeue_style( 'bbpress-style' );
 	wp_dequeue_script('cfq');
+	wp_dequeue_style( 'jetpack-carousel' );
 
 	wp_enqueue_style( 'master', get_template_directory_uri() . '/css/master.css', null, '1.3.6.9.9.9.3' );
 
