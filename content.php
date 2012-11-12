@@ -27,7 +27,7 @@
 					<?php wpcandy_theme_posted_on(); ?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
-		</header-><!-- .entry-header -->
+		</header><!-- .entry-header -->
 		
 	<?php } else { ?>	
 		<?php get_template_part( 'templates/blog', 'taxonomies' ); ?>
