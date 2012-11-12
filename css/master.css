@@ -1020,6 +1020,30 @@ a.button,
 
 
 /*-----------------------------------------------------------------------------
+ Posts
+-----------------------------------------------------------------------------*/
+
+.entry-header .entry-meta {
+	border-bottom: 1px solid #d1d1d1;
+	color: #909090;
+	float: left;
+	font-size: 12px;
+	margin-bottom: 16px;
+	padding: 0 0 2px 0;
+	width: 520px;
+}
+
+.entry-header .entry-meta a {
+	color: #909090;
+	text-decoration: none;
+}
+
+.entry-header .entry-meta a:hover {
+	text-decoration: underline;
+}
+
+
+/*-----------------------------------------------------------------------------
  Secondary Content
 -----------------------------------------------------------------------------*/
 
