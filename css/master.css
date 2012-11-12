@@ -1096,6 +1096,33 @@ a.button,
 	text-decoration: underline;
 }
 
+/* Link Posts */
+.format-link .entry-title {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+#main .format-link .post-permalink {
+	float: left;
+	margin: 0 5px 0 0;
+	position: relative;
+	top: 3px;
+	width: 20px;
+}
+
+.format-link .post-permalink a {
+	display: block;
+	height: 20px;
+	width: 20px;
+	background: url('../images/icon-link.png') left top no-repeat;
+	text-indent: -999em;
+}
+
+.format-link .entry-header .entry-meta {
+	width: 575px;
+}
+
 
 /*-----------------------------------------------------------------------------
  Secondary Content
