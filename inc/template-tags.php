@@ -200,3 +200,98 @@ function wpcandy_theme_comment_policy_notification() {
 add_action( 'comment_form_top','wpcandy_theme_comment_policy_notification' );
 
 
+/**
+ * WPCandy Current User Registration Date
+ */
+function wpcandy_user_registration_date( $user_id ) {
+	$user = get_userdata( $user_id );
+	$reg_date = date( 'l, F jS Y', strtotime( $user->user_registered ) );
+	
+	echo $reg_date;
+}
+
+
+/**
+ * WPCandy Current User Pros
+ */
+function wpcandy_user_pros( $user_id ) {
+
+	$args = array(
+		'author'			=> $user_id,
+		'posts_per_page'	=> '1',
+		'post_type'			=> 'wpdf_pro'
+	);
+	
+	// The Query
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+		$return = '<a href="' . get_permalink() . '">' . get_the_title() . '</a>';
+	endwhile;
+
+	// Reset Post Data
+	wp_reset_postdata();
+	
+	if ( ! $return ) {
+		$return = 'None!';
+	}
+	
+	echo $return;
+}
+
+
+/**
+ * WPCandy Current User Posts
+ */
+function wpcandy_user_posts( $user_id ) {
+	
+	$args = array(
+		'author'			=> $user_id,
+		'posts_per_page'	=> '5'
+	);
+	
+	// The Query
+	$the_query = new WP_Query( $args );
+	$return = '<ul>';
+
+	// The Loop
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+		$return .= '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+	endwhile;
+	
+	$return .= '</ul>';
+
+	// Reset Post Data
+	wp_reset_postdata();
+	
+	echo $return;
+}
+
+
+/**
+ * WPCandy Current User Discussions
+ */
+function wpcandy_user_discussions( $user_id ) {
+	
+	$user_id = get_current_user_id();
+	$args = array(
+		'status' 	=> 'approve',
+		'order' 	=>  'DESC',
+		'user_id' 	=> $user_id,
+		'number'	=> '5'
+	);
+	
+	$comments = get_comments($args);
+	
+	$return = '<ul>';
+	
+	foreach($comments as $comment) :
+		$return .= '<li>' . $comment->comment_content . '</li>';
+	endforeach;
+	
+	$return .= '</ul>';
+
+	echo $return;
+}
+

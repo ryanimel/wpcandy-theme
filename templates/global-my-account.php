@@ -20,6 +20,23 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					
 					<?php get_template_part( 'content', 'page' ); ?>
+					
+					<?php 
+					$user_id = get_current_user_id(); 
+					?>
+					
+					<dl class="sidebyside">
+						<dt>Registered:</dt>
+						<dd><?php wpcandy_user_registration_date( $user_id );  ?></dd>
+						<dt>My Pros:</dt>
+						<dd><?php wpcandy_user_pros( $user_id ); ?></dd>
+						<dt>My Purchases:</dt>
+						<dd>ma</dd>
+						<dt>My Discussions:</dt>
+						<dd><?php wpcandy_user_discussions( $user_id ); ?></dd>
+						<dt>My Posts:</dt>
+						<dd><?php wpcandy_user_posts( $user_id ); ?></dd>
+					</dl><!-- .sidebyside -->
 
 				<?php endwhile; // end of the loop. ?>
 
