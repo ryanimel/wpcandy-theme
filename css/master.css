@@ -1693,6 +1693,122 @@ p#archive-rss-link a {
 }
 
 
+/*-----------------------------------------------------------------------------
+ Tables
+-----------------------------------------------------------------------------*/
+
+table {
+	width: 100%;
+}
+
+table thead tr {
+	background: #eaeaea;
+}
+
+table#message-threads {
+	margin: 0 -19px;
+	width: auto;
+}
+
+table.profile-fields {
+	margin-bottom: 20px;
+}
+
+table.profile-fields:last-child {
+	margin-bottom: 0;
+}
+
+table.profile-fields p {
+	margin-top: 15px;
+}
+
+table.profile-fields p:last-child {
+	margin-top: 0;
+}
+
+div#sidebar table {
+	margin: 0 -16px;
+	width: 117%;
+}
+
+table tr td,
+table tr th {
+	vertical-align: middle;
+}
+
+table tr td.label {
+	border-right: 1px solid #eaeaea;
+	font-weight: bold;
+	width: 25%;
+}
+
+table tr td.thread-info p {
+	margin: 0;
+}
+
+table tr td.thread-info p.thread-excerpt {
+	color: #888;
+	font-size: 11px;
+	margin-top: 3px;
+}
+
+div#sidebar table td,
+table.forum td {
+	text-align: center;
+}
+
+table tr.alt td {
+	background: #f5f5f5;
+}
+
+
+/*-----------------------------------------------------------------------------
+ Definition Lists
+-----------------------------------------------------------------------------*/
+
+/* DLs in sidebar widgets */
+/* Also, mimics style with certain class anywhere */
+#sidebar dl,
+dl.sidebyside {
+	float: left;
+	margin-top: 11px;
+	width: 100%;
+}
+
+dl.sidebyside {
+	font-size: 12px;
+	margin-bottom: 34px;
+	width: 60%;
+}
+
+#sidebar dl dt,
+dl.sidebyside dt {
+	font-weight: normal;
+	width: 45%;
+}
+
+#sidebar dl dd,
+dl.sidebyside dd {
+	margin-bottom: 0;
+	width: 55%;
+}
+
+#sidebar dl dd,
+#sidebar dl dt,
+dl.sidebyside dd,
+dl.sidebyside dt {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	float: left;
+}
+
+#sidebar dl dt a,
+dl.sidebyside dt a {
+	font-weight: bold;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
 
 /*-----------------------------------------------------------------------------
  Footer
