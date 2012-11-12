@@ -65,6 +65,59 @@ footer, header, hgroup, menu, nav, section, summary {
 
 
 /*-----------------------------------------------------------------------------
+ Global Login Form
+-----------------------------------------------------------------------------*/
+
+#page {
+	position: relative;
+}
+
+#global-login-wrap {
+	position: absolute;
+	right: 12px;
+	top: -22px;
+}
+
+#global-login-actions {
+	color: #003366;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 1px 0 0 2px;
+	width: 150px;
+}
+
+#global-login .login-avatar {
+	background: #333;
+	float: left;
+	height: 22px;
+	margin: 0 8px 0 0;
+	padding: 1px;
+}
+
+#global-login .login-avatar img {
+	margin: 0;
+}
+
+#global-login-actions ul {
+	list-style: none;
+}
+
+#global-login-actions ul li {
+
+}
+
+#global-login-actions a {
+	color: #003366;
+	text-decoration: none;
+}
+
+#global-login-actions a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+/*-----------------------------------------------------------------------------
  Backgrounds and colors
 -----------------------------------------------------------------------------*/
 
@@ -722,10 +775,11 @@ del {
 	height: 30px;
 	margin-bottom: -10px;
 	margin-right: 0;
+	padding: 5px 0 0 0;
 }
 
 .brand-navigation .wrap {
-	margin: 0 auto;
+	margin: 0 auto 0 auto;
 }
 
 .brand-navigation li {
@@ -1026,11 +1080,11 @@ a.button,
 .entry-header .entry-meta {
 	border-bottom: 1px solid #d1d1d1;
 	color: #909090;
-	float: left;
+	float: right;
 	font-size: 12px;
-	margin-bottom: 16px;
+	margin-bottom: 12px;
 	padding: 0 0 2px 0;
-	width: 520px;
+	width: 540px;
 }
 
 .entry-header .entry-meta a {

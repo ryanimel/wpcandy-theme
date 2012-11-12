@@ -62,6 +62,8 @@
 				<p>A blog all about WordPress.<br /><span>Yes, we're a bit meta.</span></p>
 			</div><!-- #description -->
 		</hgroup>
+		
+		<?php get_template_part( 'templates/global', 'login' ); ?>
 
 		<nav role="navigation" class="site-navigation main-navigation">
 			<h1 class="assistive-text"><?php _e( 'Menu', 'wpcandy_theme' ); ?></h1>
