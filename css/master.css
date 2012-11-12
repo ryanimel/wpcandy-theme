@@ -542,7 +542,16 @@ del {
 	width: 100%;
 }
 
-.brand-navigation .wrap,
+.brand-navigation .wrap {
+	margin: 0 auto;
+	width: 970px;
+}
+
+.menu-brand-navigation-container {
+	margin: 0 auto;
+	width: 580px;
+}
+
 /* Post navigation */
 .navigation {
 	width: 580px;
