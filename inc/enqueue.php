@@ -84,13 +84,13 @@ function rwi_admin_blinders() {
 
 
 // Just for Pros
-add_action( 'wp_print_styles', 'pros_styles' );
+//add_action( 'wp_print_styles', 'pros_styles' );
 function pros_styles() {
 
 	if ( is_post_type_archive( 'wpdf_pro' ) || is_tax( 'wpdf_location' ) || is_tax( 'wpdf_skill' ) || is_tax( 'wpdf_price' ) || is_tax( 'wpdf_experience' ) || is_singular( 'wpdf_pro' ) || is_page( 'have-experience' ) || is_page( 'change' ) || is_page( 'that-are-mine' ) || is_page( 'everywhere' ) || is_page( 'to-watch' ) ) {
 		wp_dequeue_style( 'master' );
 		wp_dequeue_style( 'responsive' );
-		wp_enqueue_style( 'pros', THEME_CSS_URI . '/pros.min.css', null, '1.2' );
+		wp_enqueue_style( 'pros', get_template_directory_uri() . '/css/pros.css', null, '1.2' );
 	}
 
 }
