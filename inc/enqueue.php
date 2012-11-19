@@ -129,7 +129,7 @@ function quarterly_styles() {
 	if ( is_post_type_archive( 'wpcandy_issue' ) || is_singular( 'wpcandy_issue' ) ) {
 		wp_dequeue_style( 'master' );
 		wp_dequeue_style( 'responsive' );
-		wp_enqueue_style( 'quarterly', THEME_CSS_URI . '/quarterly.min.css', null, '1.2' );
+		wp_enqueue_style( 'quarterly', get_template_directory_uri() . '/css/quarterly.css', null, '1.2' );
 	}
 
 	if ( is_page( 'shoppe') || is_page( 'your-account' ) || is_page( 'checkout' ) || is_page( 'transaction-results' ) || ( 'wpsc-product' == get_post_type() ) ) {
