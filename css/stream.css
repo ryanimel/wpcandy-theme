@@ -3,15 +3,9 @@
 WPCandy.com Stream CSS
 Version: 		1.0
 
-TABLE OF CONTENTS:
-------------------
 
-
- 
- 
 COLORS:
 -------
-
 Darkest Gray: #333333
 Dark Gray: #666666
 Medium Gray: #999999
@@ -106,261 +100,94 @@ img.size-full {
 
 
 /*-----------------------------------------------------------------------------
-1.0 - Stream Defaults
+ Stream
 -----------------------------------------------------------------------------*/
-
-/* Let's hide mostly everything. */
-
-.widget-container,
-#site-navigation,
-#site-title,
-#global-login,
-#breadcrumbs,
-#colophon {
-	display: none;
-}
-
-/* Footer */
-#bottom .widget-container {
-	display: block;
-	font-size: 14px;
-	line-height: 21px;
-	padding-top: 40px;
-}
-
-#bottom p {
-	margin: 0 0 21px 0;
-}
-
-#bottom {
-	margin: 0 auto;
-	width: 650px;
-}
-
-#wpstats {
-	display: none;
-}
-
-#footer-widgets-01 {
-	float: left;
-	width: 250px;
-}
-
-#footer-widgets-02 { 
-	float: right;
-	width: 350px;
-}
-
-#text-24 {
-	display: block;
-	position: absolute;
-	right: 0;
-	top: -280px;
-	width: 160px;
-}
-
-
-/* Main Styles */
 
 body {
 	background: url('../images/bg2.gif') left top repeat;
 	font-family: 'Helvetica Neue', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 }
 
-#main {
-	background: #fff;
-	border: 1px solid #ccc;
-	position: relative;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	width: 650px;
-	margin: 350px auto 0 auto;
-}
 
-#content {
-	
-}
+/*-----------------------------------------------------------------------------
+ Brand Navigation
+-----------------------------------------------------------------------------*/
 
-#content article {
-	padding: 25px;
-}
-
-#wavestreamingPlayer {
-	position: absolute;
-	left: 0;
-	top: -190px;
-}
-
-p#streamstatus {
-	font-size: 12px;
-	font-weight: bold;
-	position: absolute;
-	left: 0;
-	top: -193px;
-	text-transform: uppercase;
-}
-
-p#streamstatus span {
-	font-weight: normal;
-	text-transform: none;
-	font-size: 18px;
-}
-
-p#streamplaying {
-	font-size: 12px;
-	font-weight: bold;
-	position: absolute;
-	left: 0;
-	top: -22px;
-	text-transform: uppercase;
-}
-
-p#streamplaying span {
-	font-weight: normal;
-	text-transform: none;
-}
-
-.entry-title {
-	background: url('../images/streamlogo4.png') left top no-repeat;
-	height: 235px;
-	position: absolute;
-	left: -35px;
-	text-indent: -999em;
-	top: -305px;
-	width: 430px;
-}
-
-#sidebar {
-
-}
-
-h3 {
-	font-size: 18px;
-	margin: 0 0 15px 0;
-}
-
-
-/* Pressed Ads */
-#text-24 a {
-	color: #000;
-	display: block;
-	font-weight: normal;
-	text-decoration: none;
-}
-
-.pa-image {
-	float: left;
-	margin-bottom: 5px;
-	margin-right: 15px;
-	padding: 2px;
-	margin: 0 0 12px 0;
-}
-
-.pa-copy,
-.pa-id {
-	float: left;
-	font-size: 12px;
-	line-height: 18px;
-	margin: 0 0 12px 0;
-	width: 150px;
-}
-
-.pa-id {
-	font-size: 8px;
-	text-transform: uppercase;
-}
-
-
-/* Brand Bar */
-
-#container {
-	margin-top: 33px;
-}
-
-#site-topics {
-	background: url('../images/brandbar4.gif') left top repeat;
+.brand-navigation {
+	background: url('../images/blog/brandbar4.gif') left top repeat;
 	border-bottom: 3px solid #333;
-	font-family: 'Helvetica Neue', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
 	height: 30px;
-	position: absolute;
-	left: 0;
-	top: 0;
+	padding: 5px 0 0 0;
 	width: 100%;
 }
 
-#site-topics ul {
-	list-style-type: none;
-}
-
-#site-topics .wrap {
+.brand-navigation .wrap {
 	margin: 0 auto;
-	width: 570px;
+	position: relative;
+	width: 970px;
 }
 
-#site-topics li {
+.menu-brand-navigation-container {
+	margin: 0 auto;
+	width: 485px;
+}
+
+.brand-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.brand-navigation li {
 	float: left;
-	font-size: 12px;
 	line-height: 30px;
-	margin: 0 50px 0 0;
-	text-transform: uppercase;
-	font-weight: bold;
+	margin: 0 25px 0 0;
 }
 
-#site-topics li:hover {
-	background: url('../images/brandbar-hover4.gif') center bottom no-repeat;
-}
-
-#site-topics li.last {
+.brand-navigation li.stream {
 	margin-right: 0;
 }
 
-#site-topics a {
+.brand-navigation li:hover {
+	background: url('../images/blog/brandbar-hover4.gif') center bottom no-repeat;
+}
+
+.brand-navigation li.stream {
+	background: url('../images/blog/brandbar-hover4.gif') center bottom no-repeat;
+}
+
+.brand-navigation a {
 	color: #003366;
 	display: block;
-	text-decoration: none;
 	padding: 0 0 0 25px;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
-#site-topics li.stream a {
-	background: url('../images/brandbar-icons2.png') left 6px no-repeat;
+.brand-navigation li.blog a, 
+.brand-navigation li.quarterly a {
+	padding-left: 30px;
 }
 
-#site-topics li.stream a:hover {
-	background: url('../images/brandbar-icons2.png') left -22px no-repeat;
+.brand-navigation li.blog a {
+	background: url('../images/blog/brandbar-icons2.png') left -107px no-repeat;
 }
 
-#site-topics li.pros a {
-	background: url('../images/brandbar-icons2.png') left -51px no-repeat;
+.brand-navigation li.quarterly a {
+	background: url('../images/blog/brandbar-icons2.png') left -167px no-repeat;
+}
+
+.brand-navigation li.pros a {
+	background: url('../images/blog/brandbar-icons2.png') left -51px no-repeat;
+}
+
+.brand-navigation li.stream a {
+	background: url('../images/blog/brandbar-icons2.png') left 6px no-repeat;
+}
+
+.brand-navigation li.pros a {
 	padding-left: 38px;
 }
 
-#site-topics li.pros a:hover {
-	background: url('../images/brandbar-icons2.png') left -79px no-repeat;
-}
-
-#site-topics li.blog a {
-	background: url('../images/brandbar-icons2.png') left -107px no-repeat;
-	padding-left: 30px;
-}
-
-#site-topics li.blog a:hover {
-	background: url('../images/brandbar-icons2.png') left -137px no-repeat;
-}
-
-#site-topics li.quarterly a {
-	background: url('../images/brandbar-icons2.png') left -167px no-repeat;
-	padding-left: 30px;
-}
-
-#site-topics li.quarterly a:hover {
-	background: url('../images/brandbar-icons2.png') left -198px no-repeat;
-}
-
-#site-topics li.stream {
-	background: url('../images/brandbar-hover4.gif') center bottom no-repeat;
-}
-
-#site-topics a:hover {
-	color: #fff;
-}

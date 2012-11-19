@@ -97,14 +97,14 @@ function pros_styles() {
 
 
 // Just for the Stream
-add_action( 'wp_print_styles', 'stream_styles' );
-add_action( 'wp_enqueue_scripts', 'stream_scripts' );
+//add_action( 'wp_print_styles', 'stream_styles' );
+//add_action( 'wp_enqueue_scripts', 'stream_scripts' );
 function stream_styles() {
 
 	if ( is_page( 'stream' ) ) {
 		wp_dequeue_style( 'master' );
 		wp_dequeue_style( 'responsive' );
-		wp_enqueue_style( 'stream', THEME_CSS_URI . '/stream.min.css', null, '1.4.1' );
+		wp_enqueue_style( 'stream', get_template_directory_uri() . '/css/stream.css', null, '1.4.1' );
 	}
 
 }

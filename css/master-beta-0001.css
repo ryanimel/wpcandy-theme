@@ -201,7 +201,8 @@ div.content-cats li.photos {
 	background: url('../images/blog/brandbar4.gif') left top repeat;
 }
 
-.brand-navigation li:hover {
+.brand-navigation li:hover,
+.brand-navigation li.current-menu-item {
 	background: url('../images/blog/brandbar-hover4.gif') center bottom no-repeat;
 }
 
@@ -235,6 +236,10 @@ div.content-cats li.photos {
 
 .brand-navigation li.blog {
 	background: url('../images/blog/brandbar-hover4.gif') center bottom no-repeat;
+}
+
+.page-id-7184 .brand-navigation li.blog {
+	background: none;
 }
 
 .brand-navigation li.quarterly a {
