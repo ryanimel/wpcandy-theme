@@ -212,6 +212,51 @@ function wpcandy_user_registration_date( $user_id ) {
 
 
 /**
+ * Get user email.
+ */
+function wpcandy_get_user_email( $user_id ) {
+	$user = get_userdata( $user_id );
+	$email = $user->user_email;
+	
+	return $email;
+}
+
+
+/**
+ * WPCandy User Email
+ */
+function wpcandy_user_email( $user_id ) {
+	$email = wpcandy_get_user_email( $user_id );
+	
+	echo $email;
+}
+
+
+/**
+ * WPCandy User Role
+ */
+function wpcandy_user_role( $user_id ) {
+	$user = new WP_User( $user_id );
+
+	if ( !empty( $user->roles ) && is_array( $user->roles ) ) {
+		foreach ( $user->roles as $role )
+			echo ucfirst( $role );
+	}
+}
+
+
+/**
+ * WPCandy User Name
+ */
+function wpcandy_user_name( $user_id ) {
+	$user = get_userdata( $user_id );
+	$name = $user->display_name;
+	
+	echo $name;
+}
+
+
+/**
  * WPCandy Current User Pros
  */
 function wpcandy_user_pros( $user_id ) {
@@ -293,5 +338,206 @@ function wpcandy_user_discussions( $user_id ) {
 	$return .= '</ul>';
 
 	echo $return;
+}
+
+
+/**
+ * Get a user's comments in an array.
+ */
+function wpcandy_get_comments( $user_id ) {
+	$args = array(
+		'order'		=> 'DESC',
+		'status'	=> 'approve',
+		'author_email'	=> wpcandy_get_user_email( $user_id ),
+	);
+	$comments = get_comments( $args );
+	
+	return $comments;
+}
+
+
+/**
+ * Get a user's comment IDs in an array.
+ */
+function wpcandy_get_comments_ids( $user_id ) {
+	$comments = wpcandy_get_comments( $user_id );
+	
+	foreach( $comments as $comment ) :
+		$array[] = $comment->comment_ID;
+	endforeach;
+	
+	return $array;
+}
+
+
+/**
+ * Get commented posts based on user id.
+ */
+function wpcandy_get_commented_posts( $user_id ) {
+	$comments = wpcandy_get_comments( $user_id );
+	
+	foreach( $comments as $comment ) :
+		$array[] = $comment->comment_post_ID;
+	endforeach;
+	
+	$unique = array_unique( $array );
+	
+	return $unique;
+}
+
+
+/**
+ * Return commented posts count.
+ */
+function wpcandy_get_commented_posts_count( $user_id ) {
+	$array = wpcandy_get_commented_posts( $user_id );
+	$count = count( $array );
+	
+	return $count;
+}
+
+
+/**
+ * Echo the commented posts count.
+ */
+function wpcandy_commented_posts_count( $user_id ) {
+	$count = wpcandy_get_commented_posts_count( $user_id );
+	
+	echo $count;
+}
+
+
+/**
+ * Get specific comment number (first, last, or a specific number).
+ */
+function wpcandy_get_specific_comment( $user_id, $num ) {
+	$array = wpcandy_get_comments_ids( $user_id );
+	sort( $array );
+	
+	if ( is_numeric( $num ) ) {
+		$target = $array[$num];
+	} else if ( $num == 'last' ) {
+		$target = end( $array );
+	}
+	
+	return $target;
+}
+
+
+/**
+ * Conditional: User has made comments.
+ */
+function wpcandy_user_has_commented( $user_id ) {
+	$comments = wpcandy_get_comments( $user_id );
+	
+	if( $comments ) {
+		$status = true;
+	} else {
+		$status = false;
+	}
+	
+	return $status;
+}
+
+
+/**
+ * Display target comment.
+ */
+function wpcandy_specific_comment( $user_id, $num ) {
+	$target = wpcandy_get_specific_comment( $user_id, $num );
+	$the_comment = get_comment( $target );
+	
+	echo '<p>Your <a href="' . get_permalink( $the_comment->comment_post_ID ) . '#comment-' . $the_comment->comment_ID . '">first ever comment</a> was on the post <a href="' . get_permalink( $the_comment->comment_post_ID ) . '">' . get_the_title( $the_comment->comment_post_ID ) . '</a>:</p>';
+	echo '<blockquote>';
+	echo $the_comment->comment_content;
+	echo '</blockquote>';
+}
+
+
+/**
+ * WPCandy Display Purchase Log
+ * Modified from http://wordpress.org/extend/plugins/wp-e-commerce-user-roles-and-purchase-history/
+ */
+function wpcandy_show_purchase_history() {
+	global $current_user, $wpdb, $table_prefix;
+	get_currentuserinfo();
+	$grand_total = 0;
+	
+	// Make sure the user is logged in and valid.
+	if( is_numeric( $current_user->ID ) && ( $current_user->ID > 0 ) ) {		
+		
+		$sql = "SELECT p.`id`, c.`name`, p.`date`, p.`totalprice`, p.`processed`, p.`sessionid` FROM `".WPSC_TABLE_PURCHASE_LOGS."` AS p, `".WPSC_TABLE_CART_CONTENTS."` AS c WHERE p.`id`=c.`purchaseid` AND `user_ID` IN ('".$current_user->ID."') ORDER BY `date` DESC";
+		
+		// Get purchases
+		$purchase_log = $wpdb->get_results( $sql,ARRAY_A );	
+
+		if($purchase_log != null) {	// this user has made some purchase 
+
+			echo "<table>";			
+			foreach( (array)$purchase_log as $purchase ) {	
+
+				$sql = "SELECT * FROM `".WPSC_TABLE_DOWNLOAD_STATUS."` WHERE `purchid`=".$purchase['id']." AND `active` IN ('1') ORDER BY `datetime` DESC";
+				
+				// Get the products purchased
+				$products = $wpdb->get_results($sql,ARRAY_A) ;			
+				$isOrderAccepted = $purchase['processed'];
+
+				foreach ((array)$products as $product){					
+					if($isOrderAccepted > 1){
+						if($product['uniqueid'] == null) {  
+							$links = get_option('siteurl')."?downloadid=".$product['id'];
+						} else {
+							$links = get_option('siteurl')."?downloadid=".$product['uniqueid'];
+						}																				
+						$download_count = $product['downloads'];
+					}
+				}
+				echo '<tr>';
+				echo '<th>Item</th>';
+				echo '<th>Date</th>';
+				echo '<th>Price</th>';
+				echo '</tr>';								
+				echo '<tr>';
+				echo '<td>'.$purchase['name'].'</td>';
+				
+				echo '<td>'.date("d/m/Y",$purchase['date']).'</td>';
+				echo '<td>'.nzshpcrt_currency_display( $purchase['totalprice'], 1, false, false, false ).'</td>';		        
+				$grand_total += $purchase['totalprice'];
+				echo '</tr>';							
+			}
+			echo '<tr>';
+			echo "<td colspan='2'><strong>Total Spent</strong></td>";
+			echo '<td><strong>' . nzshpcrt_currency_display( $grand_total, 1, false, false, false ) . '</strong></td>';
+			echo '</tr>';
+			echo '</table>';	
+		} else
+		{			
+			echo 'No transactions found.';			
+		}        
+	} else {		
+		echo 'You must be logged in to use this page.';
+	}
+}
+
+
+/**
+ * Conditional: WPCandy User Has Pros
+ */
+function wpcandy_user_has_pros( $user_id ) {
+	$args = array(
+		'author'			=> $user_id,
+		'post_type'			=> 'wpdf_pro',
+		'posts_per_page'	=> -1
+	);
+	$pros_query = new WP_Query( $args );
+	$count = $pros_query->post_count;
+
+	if ( $count > 0 ) {
+		$status = true;
+	} else {
+		$status = false;
+	}
+	
+	return $status;
 }
 

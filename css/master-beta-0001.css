@@ -1654,6 +1654,114 @@ ol ul {
 
 
 /*-----------------------------------------------------------------------------
+ My Account Template wpcandy.com/my-account
+-----------------------------------------------------------------------------*/
+
+.page-template-templatesglobal-my-account-php #primary {
+	border-right: none;
+	width: 926px;
+}
+
+.account-card {
+	border: 1px solid #ccc;
+	float: right;
+	margin-bottom: 18px;
+	width: 49%;
+}
+
+.page-template-templatesglobal-my-account-php #primary .odd {
+	clear: both;
+	float: left;
+}
+
+.page-template-templatesglobal-my-account-php #primary .entry-header {
+	margin-bottom: 18px;
+}
+
+.account-card .heading {
+	background: url('../images/blog/brandbar4.gif') left top repeat;
+	padding: 1% 3% 0.5% 3%;
+}
+
+.account-card .content {
+	padding: 5% 4%;
+}
+
+.account-card .heading h3 {
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.account-card .content dl dt {
+	color: #ccc;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 12px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.account-card .content dl dd {
+	margin: 0 0 14px 0;
+}
+
+.account-card img.avatar {
+	float: right;
+}
+
+.account-card table th {
+	background: #f1f1f1;
+	text-align: left;
+}
+
+.account-card table th,
+.account-card table td {
+	padding: 2px 5px;
+}
+
+.account-card table td {
+	padding: 6px 5px;
+}
+
+.account-card .edit-link {
+	display: inline;
+}
+
+.pro-card .pro-image {
+	float: left;
+}
+
+.pro-card .pro-info {
+	float: right;
+	width: 190px;
+}
+
+.pro-card .pro-info p {
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	margin: 0 0 12px 0 !important;
+	padding: 0 0 4px 0;
+}
+
+.pro-card .pro-info p a {
+	color: #000;
+	text-decoration: none;
+}
+
+.pro-card .pro-info ul {
+	font-size: 12px;
+	line-height: 18px;
+	list-style-type: none;
+	margin: 0 !important;
+}
+
+.pro-card .pro-info ul li {
+
+}
+
+
+/*-----------------------------------------------------------------------------
  Shows Template wpcandy.com/shows
 -----------------------------------------------------------------------------*/
 
