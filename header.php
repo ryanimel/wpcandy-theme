@@ -52,4 +52,19 @@
 		</nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
 
+	<?php if ( !is_home() && function_exists( 'bcn_display' ) ) { ?>
+	<div id="breadcrumbs">
+		<?php if ( is_post_type_archive( 'wpsc-product' ) || is_singular( 'wpsc-product' ) ) {
+			$options = array(
+					'before-breadcrumbs'	=> '<div class="wpsc-breadcrumbs"><strong>You are here:</strong> ',
+					'crumb-separator'		=> ' &gt; ',
+				);
+				wpsc_output_breadcrumbs( $options );
+			} else {
+				bcn_display(); 
+			} ?>			
+	</div><!-- #breadcrumbs -->
+	<?php } ?>
+	
+
 	<div id="main" class="site-main">

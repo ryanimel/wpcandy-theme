@@ -35,7 +35,7 @@ function wpcandy_theme_scripts() {
 	}
 
 	// Kill WPEC, except on store pages
-	if ( !is_page( 'shoppe' ) && !is_page( 'checkout' ) && !is_page( 'transaction-results' ) && !is_page( 'your-account' ) && !is_post_type_archive( 'wpcandy_issue' ) && !is_singular( 'wpcandy_issue' ) ) {
+	if ( !is_page( 'shoppe' ) && !is_page( 'checkout' ) && !is_page( 'transaction-results' ) && !is_page( 'your-account' ) && !is_post_type_archive( 'wpcandy_issue' ) && !is_singular( 'wpcandy_issue' ) && !is_singular( 'wpsc-product' ) ) {
 
 		wp_dequeue_script( 'wp-e-commerce' );
 		wp_dequeue_script( 'livequery' );
@@ -133,7 +133,7 @@ function quarterly_styles() {
 	}
 
 	if ( is_page( 'shoppe') || is_page( 'your-account' ) || is_page( 'checkout' ) || is_page( 'transaction-results' ) || ( 'wpsc-product' == get_post_type() ) ) {
-		wp_enqueue_style( 'shoppe', THEME_CSS_URI . '/shoppe.css', null, '1.0' );
+		//wp_enqueue_style( 'shoppe', THEME_CSS_URI . '/shoppe.css', null, '1.0' );
 	}
 
 }
@@ -143,11 +143,11 @@ function quarterly_scripts() {
 		wp_dequeue_script( 'scripts' );
 		wp_dequeue_script( 'live-blogging' );
 		wp_dequeue_script( 'jquery-ui-accordion' );
-		wp_enqueue_script( 'quarterly', THEME_JS_URI . '/quarterly.js', array('jquery'), '1.0.0.9', true );
+		wp_enqueue_script( 'quarterly', get_template_directory_uri() . '/js/quarterly.js', array('jquery'), '1.0.0.9', true );
 	}
 
 	if ( is_page( 'shoppe' ) || is_page( 'your-account' ) || is_page( 'checkout' ) || is_page( 'transaction-results' ) || ( 'wpsc-product' == get_post_type() ) ) {
-		wp_enqueue_script( 'quarterly', THEME_JS_URI . '/quarterly.js', array( 'jquery' ), '1.0', true );
+		wp_enqueue_script( 'quarterly', get_template_directory_uri() . '/js/quarterly.js', array( 'jquery' ), '1.0', true );
 	}
 
 }
