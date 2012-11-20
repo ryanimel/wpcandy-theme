@@ -206,8 +206,8 @@ div.content-cats li.photos {
 	background: url('../images/blog/brandbar-hover4.gif') center bottom no-repeat;
 }
 
-.brand-navigation a {
-	color: #003366;
+body .brand-navigation a {
+	color: #003366 !important;
 }
 
 .brand-navigation li.stream a {
