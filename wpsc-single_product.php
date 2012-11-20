@@ -9,16 +9,7 @@
 	$image_height = get_option( 'single_view_image_height' );
 ?>
 
-<div id="single_product_page_container">
-	
-	<?php
-		// Breadcrumbs
-		wpsc_output_breadcrumbs();
-
-		// Plugin hook for adding things to the top of the products page, like the live search
-		do_action( 'wpsc_top_of_products_page' );
-	?>
-	
+<div id="single_product_page_container">	
 	<div class="single_product_display group">
 <?php
 		/**
