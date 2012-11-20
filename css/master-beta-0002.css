@@ -1069,7 +1069,7 @@ a.button,
 	border-right: 1px solid #1e86b3;
 	border-top: 1px solid #1e86b3;
 	clear: both;
-	color: #fff;
+	color: #fff !important;
 	display: block;
 	float: left;
 	margin: 0 15px 18px 0;
