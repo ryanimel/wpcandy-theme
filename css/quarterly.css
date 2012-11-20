@@ -441,14 +441,16 @@ body {
 }
 
 #bottom {
-	background: #ccc;
+	background: #ccc url('../images/quarterly/texture.gif') repeat;
+	padding: 18px 0 90px 0;
 }
 
 #site-credits {
+	background: url('../images/quarterly/wordpress-logo.png') center top no-repeat;
 	color: #333;
 	font-size: 14px;
 	margin: 0 auto;
-	padding: 45px 0 45px 0;
+	padding-top: 50px;
 	text-align: center;
 	width: 900px;
 }
@@ -456,6 +458,20 @@ body {
 #site-credits a {
 	color: #333;
 	text-decoration: none;
+}
+
+p#proudly,
+p#credits {
+	color: rgb(102,102,102);
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+p#credits {
+	font-size: 12px;
+	font-style: normal;
 }
 
 #fancy_notification_content {

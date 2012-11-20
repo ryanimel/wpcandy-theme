@@ -8,7 +8,8 @@
 				<?php do_action( 'colophon_open' ); ?>
 
 				<div id="site-credits" class="before-2 column-4 last">
-					<p>A <a href="http://wpcandy.com" title="WPCandy">WPCandy</a> Project</p>
+					<p id="proudly">Proudly powered, of course, by WordPress</p>
+					<p id="credits">Quarterly sub-site by Ryan Imel.</p>
 				</div><!--#site-credits-->
 
 				<?php do_action( 'colophon_close' ); ?>
