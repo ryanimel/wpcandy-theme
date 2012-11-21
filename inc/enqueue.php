@@ -150,7 +150,7 @@ function knapsack_styles() {
 
 	if ( is_post_type_archive( 'wpcandy_knapsack' ) || is_singular( 'wpcandy_knapsack' ) ) {
 		wp_dequeue_style( 'master' );
-		wp_enqueue_style( 'knapsack', THEME_CSS_URI . '/knapsack.css', null, '1.0.0.9.9.9.5' );
+		wp_enqueue_style( 'knapsack', get_template_directory_uri() . '/css/knapsack.css', null, '1.0.0.9.9.9.5' );
 	}
 
 }
@@ -160,7 +160,7 @@ function knapsack_scripts() {
 		wp_dequeue_script( 'scripts' );
 		wp_dequeue_script( 'live-blogging' );
 		wp_dequeue_script( 'jquery-ui-accordion' );
-		wp_enqueue_script( 'knapsack', THEME_JS_URI . '/knapsack.js', array('jquery'), '1.0.0.6', true );
+		wp_enqueue_script( 'knapsack', get_template_directory_uri() . '/js/knapsack.js', array('jquery'), '1.0.0.6', true );
 	}
 
 }
@@ -210,6 +210,3 @@ function remove_admin_bar_style_frontend() { // css override for the frontend
 	</style>';  
 }  
 add_filter('wp_head','remove_admin_bar_style_frontend', 99);  
-
-
-
