@@ -541,3 +541,37 @@ function wpcandy_user_has_pros( $user_id ) {
 	return $status;
 }
 
+
+/**
+ * WPCandy custom: wpsc product price function
+ * @return string - the product price
+ */
+function wpcandy_wpsc_the_product_price( $no_decimals = false, $only_normal_price = false ) {
+	global $wpsc_query, $wpsc_variations, $wpdb;
+	$product_id = get_the_ID();
+	if ( ! empty( $wpsc_variations->first_variations ) ) {
+		$from_text = apply_filters( 'wpsc_product_variation_text', ' <span class="from">from</span> ' );
+		$output = wpsc_product_variation_price_available( $product_id, __( " {$from_text} %s", 'wpsc' ), $only_normal_price );
+	} else {
+		$price = $full_price = get_post_meta( $product_id, '_wpsc_price', true );
+
+		if ( ! $only_normal_price ) {
+			$special_price = get_post_meta( $product_id, '_wpsc_special_price', true );
+
+			if ( ( $full_price > $special_price ) && ( $special_price > 0 ) )
+				$price = $special_price;
+		}
+
+		if ( $no_decimals == true )
+			$price = array_shift( explode( ".", $price ) );
+
+		$price = apply_filters( 'wpsc_do_convert_price', $price, $product_id );
+		$args = array(
+			'display_as_html' => false,
+			'display_decimal_point' => ! $no_decimals
+		);
+		$output = wpsc_currency_display( $price, $args );
+	}
+	return $output;
+}
+

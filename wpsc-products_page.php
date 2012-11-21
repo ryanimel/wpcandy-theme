@@ -1,3 +1,9 @@
+<h1>The WPCandy Shoppe</h1>
+
+<p>Your one-stop <em>shoppe</em> for WPCandy products and merchandise!</p>
+
+<hr />
+
 <?php
 global $wp_query;	
 $image_width = get_option('product_image_width');
@@ -7,8 +13,6 @@ $image_width = get_option('product_image_width');
 ?>
 <div id="default_products_page_container" class="wrap wpsc_container">
 
-<?php wpsc_output_breadcrumbs(); ?>
-	
 	<?php do_action('wpsc_top_of_products_page'); // Plugin hook for adding things to the top of the products page, like the live search ?>
 	<?php if(wpsc_display_categories()): ?>
 	  <?php if(wpsc_category_grid_view()) :?>
@@ -63,7 +67,7 @@ $image_width = get_option('product_image_width');
 				<div class="shoppe-item-title">
 					<h3><a class="wpsc_product_title" href="<?php echo wpsc_the_product_permalink(); ?>" title="<?php wpsc_the_product_title(); ?>"><?php echo wpsc_the_product_title(); ?></a></h3>
 					<div class="shoppe-details">
-						<p class="pricedisplay product_<?php echo wpsc_the_product_id(); ?>"><span id='product_price_<?php echo wpsc_the_product_id(); ?>' class="currentprice pricedisplay"><?php echo wpsc_the_product_price(); ?></span></p>
+						<p class="pricedisplay product_<?php echo wpsc_the_product_id(); ?>"><span id='product_price_<?php echo wpsc_the_product_id(); ?>' class="currentprice pricedisplay"><?php echo wpcandy_wpsc_the_product_price(); ?></span></p>
 					</div><!-- .shoppe-details -->
 					<div class="clear"></div>
 				</div><!-- .shoppe-item-title -->

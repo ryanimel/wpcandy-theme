@@ -12,7 +12,7 @@ if(wpsc_cart_item_count() < 1) :
 endif;
 ?>
 <div id="checkout_page_container">
-<h3><?php _e('Please review your order', 'wpsc'); ?></h3>
+<h3><?php _e('Please review your order below:', 'wpsc'); ?></h3>
 <table class="checkout_cart">
    <tr class="header">
       <th colspan="2" ><?php _e('Product', 'wpsc'); ?></th>
@@ -37,8 +37,8 @@ endif;
          <td class="firstcol wpsc_product_image wpsc_product_image_<?php echo wpsc_the_cart_item_key(); ?>">
          <?php if('' != wpsc_cart_item_image()): ?>
 			<?php do_action ( "wpsc_before_checkout_cart_item_image" ); ?>
-            <img src="<?php echo wpsc_cart_item_image(); ?>" alt="<?php echo wpsc_cart_item_name(); ?>" title="<?php echo wpsc_cart_item_name(); ?>" class="product_image" />
-			<?php do_action ( "wpsc_after_checkout_cart_item_image" ); ?>
+			<?php echo get_the_post_thumbnail( wpsc_cart_item_product_id(), 'thumbnail' ); ?>
+            <?php do_action ( "wpsc_after_checkout_cart_item_image" ); ?>
          <?php else:
          /* I dont think this gets used anymore,, but left in for backwards compatibility */
          ?>
@@ -77,7 +77,7 @@ endif;
                <input type="hidden" name="quantity" value="0" />
                <input type="hidden" name="key" value="<?php echo wpsc_the_cart_item_key(); ?>" />
                <input type="hidden" name="wpsc_update_quantity" value="true" />
-               <input type="submit" value="<?php _e('Remove', 'wpsc'); ?>" name="submit" />
+               <input class="remove_submit_button" type="submit" value="<?php _e('Remove', 'wpsc'); ?>" name="submit" />
             </form>
          </td>
       </tr>
@@ -133,7 +133,7 @@ endif;
       <table class="productcart">
          <tr class="wpsc_shipping_info">
             <td colspan="5">
-               <?php _e('Please choose a country below to calculate your shipping costs', 'wpsc'); ?>
+               <?php _e('Please choose a country below to calculate your shipping costs.', 'wpsc'); ?>
             </td>
          </tr>
 
@@ -157,7 +157,7 @@ endif;
                <form name='change_country' id='change_country' action='' method='post'>
                   <?php echo wpsc_shipping_country_list();?>
                   <input type='hidden' name='wpsc_update_location' value='true' />
-                  <input type='submit' name='wpsc_submit_zipcode' value='Calculate' />
+                  <input class="calculate_shipping_button" type='submit' name='wpsc_submit_zipcode' value='Calculate' />
                </form>
             </td>
          </tr>
@@ -320,7 +320,7 @@ endif;
                    ?>
 					<label for='shippingSameBilling'><?php _e('Same as billing address:','wpsc'); ?></label>
 					<input type='checkbox' value='true' name='shippingSameBilling' id='shippingSameBilling' <?php echo $checked; ?> />
-					<br/><span id="shippingsameasbillingmessage"><?php _e('Your order will be shipped to the billing address', 'wpsc'); ?></span>
+					<br/><span id="shippingsameasbillingmessage"><?php _e('Your order will be shipped to the billing address.', 'wpsc'); ?></span>
                   </td>
                </tr>
                <?php endif;
@@ -361,9 +361,10 @@ endif;
             }elseif( $wpsc_checkout->checkout_item->unique_name == 'billingemail'){ ?>
                <?php $email_markup =
                "<div class='wpsc_email_address'>
+				  <h2>Enter Your Email Address</h2>
                   <p class='" . wpsc_checkout_form_element_id() . "'>
                      <label class='wpsc_email_address' for='" . wpsc_checkout_form_element_id() . "'>
-                     " . __('Enter your email address', 'wpsc') . "
+                     " . __('Enter your email address:', 'wpsc') . "
                      </label>
                   <p class='wpsc_email_address_p'>
                   <img src='https://secure.gravatar.com/avatar/empty?s=60&amp;d=mm' id='wpsc_checkout_gravatar' />
@@ -371,7 +372,7 @@ endif;
                   
                    if(wpsc_the_checkout_item_error() != '')
                       $email_markup .= "<p class='validation-error'>" . wpsc_the_checkout_item_error() . "</p>";
-               $email_markup .= "</div>";
+               $email_markup .= "<div class='clear'></div></div>";
              }else{ ?>
 			<tr>
                <td class='<?php echo wpsc_checkout_form_element_id(); ?>'>
@@ -459,6 +460,7 @@ endif;
       <?php endif; ?>
       </table>
 
+<div id="review-and-purchase">
    <table  class='wpsc_checkout_table table-4'>
       <?php if(wpsc_uses_shipping()) : ?>
 	      <tr>
@@ -499,6 +501,8 @@ endif;
       </td>
    </tr>
    </table>
+<div class="clear"></div>
+</div><!-- #review-and-purchase -->
 
 <!-- div for make purchase button -->
       <div class='wpsc_make_purchase'>

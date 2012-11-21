@@ -69,12 +69,13 @@
 								</fieldset>
 							<?php endif; ?>	
 						<?php /** the variation group HTML and loop */?>
-                        <?php if (wpsc_have_variation_groups()) { ?>
-                        <fieldset><legend><?php _e('Product Options', 'wpsc'); ?></legend>
+                        
+                        <fieldset class="variation">
+						<?php if (wpsc_have_variation_groups()) { ?>
 						<div class="wpsc_variation_forms">
                         	<table>
 							<?php while (wpsc_have_variation_groups()) : wpsc_the_variation_group(); ?>
-								<tr><td class="col1"><label for="<?php echo wpsc_vargrp_form_id(); ?>"><?php echo wpsc_the_vargrp_name(); ?>:</label></td>
+								<tr>
 								<?php /** the variation HTML and loop */?>
 								<td class="col2"><select class="wpsc_select_variation" name="variation[<?php echo wpsc_vargrp_id(); ?>]" id="<?php echo wpsc_vargrp_form_id(); ?>">
 								<?php while (wpsc_have_variations()) : wpsc_the_variation(); ?>
@@ -84,8 +85,9 @@
 							<?php endwhile; ?>
                             </table>
 						</div><!--close wpsc_variation_forms-->
-                        </fieldset>
-						<?php } ?>
+                        <?php } ?>
+						</fieldset>
+						
 						<?php /** the variation group HTML and loop ends here */?>
 
 							<?php
@@ -117,7 +119,7 @@
 									<?php if(wpsc_product_on_special()) : ?>
 										<p class="pricedisplay <?php echo wpsc_the_product_id(); ?>"><?php _e('Old Price', 'wpsc'); ?>: <span class="oldprice" id="old_product_price_<?php echo wpsc_the_product_id(); ?>"><?php echo wpsc_product_normal_price(); ?></span></p>
 									<?php endif; ?>
-									<p class="pricedisplay <?php echo wpsc_the_product_id(); ?>"><span id='product_price_<?php echo wpsc_the_product_id(); ?>' class="currentprice pricedisplay"><?php echo wpsc_the_product_price(); ?></span></p>
+									<p class="pricedisplay <?php echo wpsc_the_product_id(); ?>"><span id='product_price_<?php echo wpsc_the_product_id(); ?>' class="currentprice pricedisplay"><?php echo wpcandy_wpsc_the_product_price( false, true ); ?></span></p>
 									<?php if(wpsc_product_on_special()) : ?>
 										<p class="pricedisplay product_<?php echo wpsc_the_product_id(); ?>"><?php _e('You save', 'wpsc'); ?>: <span class="yousave" id="yousave_<?php echo wpsc_the_product_id(); ?>"><?php echo wpsc_currency_display(wpsc_you_save('type=amount'), array('html' => false)); ?>! (<?php echo wpsc_you_save(); ?>%)</span></p>
 									<?php endif; ?>
