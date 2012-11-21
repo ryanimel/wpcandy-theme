@@ -61,16 +61,6 @@ function wpcandy_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'wpcandy_theme_scripts' );
 
 
-// Enqueues CSS for BuddyPress pages
-add_action( 'wp_enqueue_scripts', 'bp_dtheme_enqueue_styles' );
-function bp_dtheme_enqueue_styles() {
-
-	// Default CSS
-	//wp_enqueue_style( 'master', get_template_directory_uri() . '/css/master.css', null, '1.0' );
-
-}
-
-
 //add_action( 'wp_print_styles', 'rwi_admin_blinders' );
 function rwi_admin_blinders() {
 
