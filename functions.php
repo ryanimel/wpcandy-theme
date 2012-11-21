@@ -32,6 +32,9 @@ function wpcandy_theme_setup() {
 
 	// Enqueues of styles and scripts are elsewhere. They are many.
 	require( get_template_directory() . '/inc/enqueue.php' );
+	
+	// A couple of tweaks just for our theme. Could be moved into functionality plugin soon.
+	require( get_template_directory() . '/inc/tweaks.php' );
 
 	// Make theme translatable.
 	// load_theme_textdomain( 'wpcandy_theme', get_template_directory() . '/languages' );

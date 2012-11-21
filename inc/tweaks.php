@@ -17,7 +17,7 @@ function wpcandy_theme_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'wpcandy_theme_page_menu_args' );
+//add_filter( 'wp_page_menu_args', 'wpcandy_theme_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -32,7 +32,7 @@ function wpcandy_theme_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'wpcandy_theme_body_classes' );
+//add_filter( 'body_class', 'wpcandy_theme_body_classes' );
 
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
@@ -49,4 +49,19 @@ function wpcandy_theme_enhanced_image_navigation( $url, $id ) {
 
 	return $url;
 }
-add_filter( 'attachment_link', 'wpcandy_theme_enhanced_image_navigation', 10, 2 );
+//add_filter( 'attachment_link', 'wpcandy_theme_enhanced_image_navigation', 10, 2 );
+
+
+/**
+ * Replace a hook in WP-OGP plugin that's breaking Shoppe.
+ */
+function wpcandy_wporgp_add_head() {
+
+	if ( !is_singular( 'wpsc-product' ) ) {
+		$data = wpogp_set_data();
+		echo get_wpogp_headers($data);
+	}
+
+}
+remove_action( 'wp_head', 'wpogp_add_head' );
+add_action( 'wp_head', 'wpcandy_wporgp_add_head' );
