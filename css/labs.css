@@ -950,7 +950,162 @@ div.aligncenter {
 	padding: 3px 0 3px 0;
 	text-align: left;
 }
-	
+
+
+/*-----------------------------------------------------------------------------
+ Brand Navigation
+-----------------------------------------------------------------------------*/
+
+.brand-navigation {
+	background: url('../images/blog/brandbar4.gif') left top repeat;
+	border-bottom: 3px solid #333;
+	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	height: 30px;
+	padding: 5px 0 0 0;
+	width: 100%;
+}
+
+.brand-navigation .wrap {
+	margin: 0 auto;
+	position: relative;
+	width: 970px;
+}
+
+.menu-brand-navigation-container {
+	margin: 0 auto;
+	width: 485px;
+}
+
+.brand-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.brand-navigation li {
+	float: left;
+	line-height: 30px;
+	margin: 0 25px 0 0;
+}
+
+.brand-navigation li.stream {
+	margin-right: 0;
+}
+
+.brand-navigation li:hover {
+	background: url('../images/blog/brandbar-hover4.gif') center bottom no-repeat;
+}
+
+.brand-navigation li.quarterly {
+	background: url('../images/blog/brandbar-hover4.gif') center bottom no-repeat;
+}
+
+.brand-navigation a {
+	color: #003366;
+	display: block;
+	padding: 0 0 0 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.brand-navigation li.blog a, 
+.brand-navigation li.quarterly a {
+	padding-left: 30px;
+}
+
+.brand-navigation li.blog a {
+	background: url('../images/blog/brandbar-icons2.png') left -107px no-repeat;
+}
+
+.brand-navigation li.quarterly a {
+	background: url('../images/blog/brandbar-icons2.png') left -167px no-repeat;
+}
+
+.brand-navigation li.pros a {
+	background: url('../images/blog/brandbar-icons2.png') left -51px no-repeat;
+}
+
+.brand-navigation li.stream a {
+	background: url('../images/blog/brandbar-icons2.png') left 6px no-repeat;
+}
+
+.brand-navigation li.pros a {
+	padding-left: 38px;
+}
+
+
+/*-----------------------------------------------------------------------------
+ Global Login Form
+-----------------------------------------------------------------------------*/
+
+#page {
+	margin: 0 auto;
+	position: relative;
+	width: 978px;
+}
+
+#global-login-wrap {
+	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	font-size: 12px;
+	position: absolute;
+	right: 8px;
+	top: -32px;
+}
+
+#global-login-actions {
+	color: #003366;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 1px 0 0 2px;
+	width: 150px;
+}
+
+#global-login .login-avatar {
+	background: #333;
+	float: left;
+	height: 22px;
+	margin: 0 8px 0 0;
+	padding: 1px;
+}
+
+#global-login .login-avatar img {
+	margin: 0;
+}
+
+#global-login-actions ul {
+	list-style: none;
+}
+
+#global-login-actions ul li {
+	line-height: 22px;
+	margin: 0;
+	padding: 0;
+}
+
+#global-login-actions ul li:hover {
+	background: none;
+}
+
+#global-login a {
+	margin: 0;
+	padding: 0;
+	text-transform: none;
+}
+
+#global-login-actions a {
+	color: #003366;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+#global-login-actions a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
 	
 /*-----------------------------------------------------------------------------
 3.0 - Header
@@ -1317,16 +1472,77 @@ li.minor-checkbox {
  x.0 - KILL KILL KILL 
 -----------------------------------------------------------------------------*/
 
-#global-login,
-#site-navigation,
-#sidebar section,
-#footer-widgets,
-#site-info {
+#masthead {
 	display: none;
 }
 
-#sidebar #text-24 {
-	display: block;
+
+/*-----------------------------------------------------------------------------
+ Footer
+-----------------------------------------------------------------------------*/
+
+#colophon {
+	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	padding: 35px 0;
+}
+
+#colophon a {
+	color: rgb(102,102,102);
+	text-decoration: none;
+}
+
+#colophon a:hover {
+	color: #000;
+}
+
+.site-info {
+	border-top: 1px solid #ccc;
+	clear: both;
+	font-family: Georgia, serif;
+	padding: 18px 0 0 0;
+	text-align: center;
+}
+
+#proudly {
+	background: url('../images/blog/wordpress-logo.png') center top no-repeat;
+	font-size: 16px;
+	font-style: italic;
+	margin: 0;
+	padding-top: 50px;
+}
+
+#credits {
+	font-size: 12px;
+}
+
+#colophon .first,
+#colophon .second,
+#colophon .third,
+#colophon .fourth {
+	float: left;
+	margin: 0 0 24px 0;
+	width: 20%;
+}
+
+#colophon .first {
+	margin-left: 2%;
+}
+
+#colophon .first,
+#colophon .second,
+#colophon .third {
+	margin-right: 5%;
+}
+
+#colophon ul {
+	font-size: 15px;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+#colophon ul ul {
+	font-size: 14px;
+	font-weight: normal;
 }
 
 
@@ -1340,6 +1556,15 @@ li.minor-checkbox {
 	margin: 0 auto;
 	position: relative;
 	width: 700px;
+}
+
+#breadcrumbs {
+	margin: 15px auto 25px auto;
+}
+
+#primary {
+	float: left;
+	width: 500px;
 }
 
 .entry-content {
@@ -1356,6 +1581,12 @@ li.minor-checkbox {
 	background: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 24%); /* IE10+ */
 	background: linear-gradient(top, #eeeeee 0%,#ffffff 24%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#secondary {
+	float: right;
+	margin: 100px 0 0 0;
+	width: 160px;
 }
 
 #text-24 {
@@ -1393,7 +1624,7 @@ li.minor-checkbox {
 #header-image {
 	left: 0;
 	position: absolute;
-	top: -18px;
+	top: -5px;
 }
 
 #header-image img {

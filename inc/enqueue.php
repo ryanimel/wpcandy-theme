@@ -129,7 +129,7 @@ function quarterly_styles() {
 	if ( is_post_type_archive( 'wpcandy_issue' ) || is_singular( 'wpcandy_issue' ) ) {
 		wp_dequeue_style( 'master' );
 		wp_dequeue_style( 'responsive' );
-		wp_enqueue_style( 'quarterly', get_template_directory_uri() . '/css/quarterly.css', null, '1.2' );
+		wp_enqueue_style( 'quarterly', get_template_directory_uri() . '/css/quarterly.css', null, '1.3' );
 	}
 
 	if ( is_page( 'shoppe') || is_page( 'your-account' ) || is_page( 'checkout' ) || is_page( 'transaction-results' ) || ( 'wpsc-product' == get_post_type() ) ) {
@@ -183,7 +183,7 @@ function wpclabs_pluginheader_styles() {
 
 	if ( is_page( 'plugin-header-creator' ) || is_page( 'theme-css-header-creator' ) || is_page( 'events-management-comparison' ) ) {
 		wp_dequeue_style( 'master' );
-		wp_enqueue_style( 'wpcandy-labs', THEME_CSS_URI . '/labs.css', null, '0.1.6' );
+		wp_enqueue_style( 'wpcandy-labs', get_template_directory_uri() . '/css/labs.css', null, '1.1.6' );
 	}
 
 }

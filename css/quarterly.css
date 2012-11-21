@@ -202,6 +202,7 @@ body {
 }
 
 #global-login a {
+	display: inline;
 	margin: 0;
 	padding: 0;
 	text-transform: none;
@@ -237,7 +238,7 @@ body {
 #masthead .wrap {
 	margin: 0 auto;
 	padding: 25px 0;
-	width: 900px;
+	width: 978px;
 }
 
 .site-title a {
@@ -287,7 +288,7 @@ body {
 
 .entry-content {
 	margin: 0 auto;
-	width: 900px;
+	width: 978px;
 }
 
 #issue-desc {
@@ -295,7 +296,7 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	margin: 0 25px 0 0;
-	width: 500px;
+	width: 578px;
 }
 
 .entry-title {
@@ -375,13 +376,13 @@ body {
 .entry-utility .wrap {
 	margin: 0 auto;
 	padding: 25px 0;
-	width: 900px;
+	width: 978px;
 }
 
 .entry-utility .contributor {
 	float: left;
 	margin: 0 15px 20px 0;
-	width: 290px;
+	width: 316px;
 }
 
 .entry-utility .num-3,
@@ -437,7 +438,7 @@ body {
 #mailing-list .wrap {
 	margin: 0 auto;
 	padding: 15px 0;
-	width: 900px;
+	width: 978px;
 }
 
 #bottom {
@@ -452,7 +453,7 @@ body {
 	margin: 0 auto;
 	padding-top: 50px;
 	text-align: center;
-	width: 900px;
+	width: 978px;
 }
 
 #site-credits a {
