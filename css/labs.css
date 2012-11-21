@@ -1051,7 +1051,7 @@ div.aligncenter {
 	font-size: 12px;
 	position: absolute;
 	right: 8px;
-	top: -32px;
+	top: -47px;
 }
 
 #global-login-actions {
@@ -1472,7 +1472,8 @@ li.minor-checkbox {
  x.0 - KILL KILL KILL 
 -----------------------------------------------------------------------------*/
 
-#masthead {
+#masthead hgroup,
+#masthead .site-navigation {
 	display: none;
 }
 
@@ -1585,7 +1586,7 @@ li.minor-checkbox {
 
 #secondary {
 	float: right;
-	margin: 100px 0 0 0;
+	margin: 110px 0 0 0;
 	width: 160px;
 }
 
