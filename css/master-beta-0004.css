@@ -1961,6 +1961,12 @@ ol ul {
 	width: 170px;
 }
 
+.single-wpsc-product .soldout {
+	clear: both;
+	line-height: 26px;
+	margin: 0 0 4px 0 !important;
+}
+
 .single-wpsc-product .variation select {
 	margin: -8px 0 0 0;
 	width: 100%;
