@@ -2977,7 +2977,7 @@ p.comment-subscription-form {
 	width: 95%;
 }
 
-p.subscribe-to-comments {
+#main p.subscribe-to-comments {
 	border-bottom: 0;
 	margin-bottom: 0;
 	padding-bottom: 0;
