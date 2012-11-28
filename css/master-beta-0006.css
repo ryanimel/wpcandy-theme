@@ -1034,7 +1034,9 @@ p img {
 }
 
 .entry-title {
+	float: left;
 	margin-top: 10px;
+	width: 80%;
 }
 
 .entry-title a {
@@ -1082,6 +1084,29 @@ div.content-cats li.tag a {
 
 footer.entry-meta {
 	clear: both;
+}
+
+/* Post Comment Count */
+.post-comment-count {
+	float: right;
+	font-size: 16px;
+	padding: 7px 0 0 0;
+	width: auto;
+}
+
+.post-comment-count a {
+	background: #848484;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+	color: #fff;
+	display: block;
+	padding: 3px 8px;
+	text-decoration: none;
+}
+
+.post-comment-count a:hover {
+	background: #515151;
 }
 
 

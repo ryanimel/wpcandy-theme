@@ -21,6 +21,8 @@
 			<?php } else { ?>
 				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php } ?>
+			
+			<p class="post-comment-count"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpcandy_theme' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php comments_number( '0', '1', '%' ); ?></a></p>
 
 			<?php if ( 'post' == get_post_type( get_the_ID() ) ) : ?>
 				<div class="entry-meta">
@@ -35,7 +37,9 @@
 		<header class="entry-header">
 		
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpcandy_theme' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
+			
+			<p class="post-comment-count"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpcandy_theme' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php comments_number( '0', '1', '%' ); ?></a></p>
+			
 			<?php if ( 'post' == get_post_type() ) : ?>
 				<div class="entry-meta">
 					<?php wpcandy_theme_posted_on(); ?>
