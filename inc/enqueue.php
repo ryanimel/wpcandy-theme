@@ -14,7 +14,7 @@ function wpcandy_theme_scripts() {
 	wp_dequeue_style( 'admin-bar' );
 	wp_dequeue_script('cfq');
 
-	wp_enqueue_style( 'master', get_template_directory_uri() . '/css/master-beta-0006.css', null, '' );
+	wp_enqueue_style( 'master', get_template_directory_uri() . '/css/master-beta-0007.css', null, '' );
 
 	if ( is_page( 'coverage' ) ) {
 			wp_enqueue_script( 'listnav', get_template_directory_uri() . '/js/listnav.js', array('jquery'), '1.0', true );
