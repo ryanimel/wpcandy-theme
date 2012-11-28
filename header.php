@@ -36,9 +36,10 @@
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
 			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<div id="description-swap">
-				<p>A blog all about WordPress.<br /><span>Yes, we're a bit meta.</span></p>
-			</div><!-- #description -->
+			
+			<div id="leaderboard">
+				<div id="azk77435"></div>
+			</div><!-- #leaderboard -->
 		</hgroup>
 		
 		<?php get_template_part( 'templates/global', 'login' ); ?>
