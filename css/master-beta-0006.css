@@ -836,9 +836,9 @@ del {
 -----------------------------------------------------------------------------*/
 
 #breadcrumbs {
-	background: #eee;
+	background: #eaeaea;
 	color: rgb(102,102,102);
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 1px solid #c1c1c1;
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
 	font-size: 13px;
@@ -1194,8 +1194,8 @@ a.more-link,
 
 /* Sidebar Stuff */
 #text-24 {
-	background: #eee;
-	border-bottom: 1px solid #ccc;
+	background: #fff;
+	border-bottom: 1px solid #eaeaea;
 	font-size: 12px;
 	padding: 30px 20px 1px;
 }
@@ -2947,6 +2947,10 @@ select {
 /* Join the mailing list form */
 #sidebar #gform_wrapper_1 .ginput_complex {
 	margin-bottom: 10px;
+}
+
+#text-34 {
+	border-bottom: 1px solid #eaeaea;
 }
 
 /* Site Search */	
