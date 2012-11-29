@@ -1331,19 +1331,20 @@ a.more-link,
 }
 
 .wpcandy-topics-widget ul li a {
-	background-color: #5b5b5b;
 	background-repeat: no-repeat;
-	border: 2px solid #515151;
+	background-color: #282828;
+	border: 2px solid #1e1e1e;
 	color: #fff;
 	display: block;
 	padding: 70px 0 3px 0;
 	text-decoration: none;
+	letter-spacing: 1px;
 	width: 100%;
 }
 
 .wpcandy-topics-widget ul li.business a {
 	background-image: url('../images/blog/topics-sprite.png');
-	background-position: -976px 21px;
+	background-position: -978px 21px;
 }
 
 .wpcandy-topics-widget ul li.hosting a {
@@ -1397,54 +1398,54 @@ a.more-link,
 }
 
 /* Red */
-.wpcandy-topics-widget ul li.business a {
+/*.wpcandy-topics-widget ul li.business a {
 	background-color: #680600;
 	border-color: #5E0500;
 }
-
+*/
 /* Green */
-.wpcandy-topics-widget ul li.wordcamp a {
+/*.wpcandy-topics-widget ul li.wordcamp a {
 	background-color: #27802A;
 	border-color: #63A765;
-}
+}*/
 
 /* Purple */
-.wpcandy-topics-widget ul li.plugins a,
+/*.wpcandy-topics-widget ul li.plugins a,
 .wpcandy-topics-widget ul li.mobile a {
 	background-color: #624171;
 	border-color: #9675A3;
-}
+}*/
 
 /* Brown */
-.wpcandy-topics-widget ul li.security a {
+/*.wpcandy-topics-widget ul li.security a {
 	background-color: #423433;
 	border-color: #734742;
-}
+}*/
 
 /* Blue */
-.wpcandy-topics-widget ul li.blogging a,
+/*.wpcandy-topics-widget ul li.blogging a,
 .wpcandy-topics-widget ul li.themes a,
 .wpcandy-topics-widget ul li.multisite a {
 	background-color: #264FAD;
 	border-color: #1E6DC0;
-}
+}*/
 
 /* Orange */
-.wpcandy-topics-widget ul li.hosting a,
+/*.wpcandy-topics-widget ul li.hosting a,
 .wpcandy-topics-widget ul li.buddypress a {
 	background-color: #AF6A1E;
 	border-color: #CF9643;
-}
+}*/
 
 /* Pink */
-.wpcandy-topics-widget ul li.bbpress a {
+/*.wpcandy-topics-widget ul li.bbpress a {
 	background-color: #FF1C56;
 	border-color: #FF3B6D;
-}
+}*/
 
 .wpcandy-topics-widget ul li a:hover {
-	background-color: #282828 !important;
-	border: 2px solid #1e1e1e !important;
+	background-color: #5b5b5b !important;
+	border: 2px solid #515151 !important;
 }
 
 
