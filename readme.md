@@ -23,3 +23,4 @@ http://thenounproject.com/noun/briefcase/#icon-No6048
 http://thenounproject.com/noun/blog/#icon-No460
 http://thenounproject.com/noun/paint-can/#icon-No6007
 http://thenounproject.com/noun/plug-in/#icon-No135
+http://thenounproject.com/noun/price-tag/#icon-No422

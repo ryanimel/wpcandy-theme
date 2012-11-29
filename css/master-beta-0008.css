@@ -1450,6 +1450,24 @@ a.more-link,
 
 
 /*-----------------------------------------------------------------------------
+ Archive Headers
+-----------------------------------------------------------------------------*/
+
+body.archive .page-header {
+	margin: 0 0 24px 0;
+	padding: 0 0 15px 0;
+}
+
+body.archive .page-header .page-title {
+	background: url('../images/blog/icon-tag.png') left 10px no-repeat;
+	border-bottom: 1px solid #e8e8e8;
+	font-size: 18px;
+	margin: 0 0 14px 0 !important;
+	padding: 0 0 0 20px;
+}
+
+
+/*-----------------------------------------------------------------------------
  Navigation Below
 -----------------------------------------------------------------------------*/
 
