@@ -23,8 +23,8 @@
 				<div class="title-wrap">
 					<p>
 						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'wpcandy_theme' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
-							<?php if ( strlen( $post->post_title ) > 40 ) {
-								echo substr( the_title( $before = '', $after = '', FALSE), 0, 40 ) . '...'; 
+							<?php if ( strlen( $post->post_title ) > 45 ) {
+								echo substr( the_title( $before = '', $after = '', FALSE), 0, 45 ) . '&hellip;'; 
 							} else {
 								the_title();
 							} ?>

@@ -1132,12 +1132,8 @@ footer.entry-meta {
 }
 
 #featured-posts li.featured-post {
-	border: 1px solid #c1c1c1;
 	float: left;
-	height: 125px;
 	margin: 0;
-	overflow: hidden;
-	position: relative;
 	width: 300px;
 }
 
@@ -1150,19 +1146,22 @@ footer.entry-meta {
 	margin: 0;
 }
 
+#featured-posts .image {
+	border: 1px solid #c1c1c1;
+	height: 125px;
+	overflow: hidden;
+}
+
 #featured-posts .title {
-	background: rgba(0,0,0,0.75);
-	bottom: 0;
-	color: #fff;
+	color: #333;
 	font-size: 13px;
-	left: 0;
+	font-weight: bold;
 	line-height: 16px;
-	position: absolute;
 	width: 100%;
 }
 
 #featured-posts .title .title-wrap {
-	padding: 10px 15px;
+	padding: 10px 0 0 0;
 }
 
 #featured-posts li.featured-post p {
@@ -1170,14 +1169,17 @@ footer.entry-meta {
 }
 
 #featured-posts .title a {
-	color: #fff;
-	font-weight: bold;
+	color: #333;
 	text-decoration: none;
 }
 
 #featured-posts li.featured-post .comments {
 	font-size: 11px;
 	font-weight: normal;
+}
+
+#featured-posts li.featured-post .comments a {
+	color: #8e8e8e;
 }
 
 
