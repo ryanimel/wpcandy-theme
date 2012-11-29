@@ -1308,6 +1308,145 @@ a.more-link,
 	margin: 0 20px 20px 0;
 }
 
+/* Topics Widget */
+
+.wpcandy-topics-widget ul {
+	list-style: none;
+	margin: 0 !important;
+	padding: 10px 0 0 0 !important;
+}
+
+.wpcandy-topics-widget ul li {
+	float: left;
+	font-size: 12px;
+	margin: 0 12px 8px 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 86px;
+}
+
+.wpcandy-topics-widget ul li.third {
+	margin-right: 0;
+}
+
+.wpcandy-topics-widget ul li a {
+	background-color: #5b5b5b;
+	background-repeat: no-repeat;
+	border: 2px solid #515151;
+	color: #fff;
+	display: block;
+	padding: 50px 0 3px 0;
+	text-decoration: none;
+	width: 100%;
+}
+
+.wpcandy-topics-widget ul li.business a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -976px 8px;
+}
+
+.wpcandy-topics-widget ul li.hosting a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -771px 9px;
+}
+
+.wpcandy-topics-widget ul li.wordcamp a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -77px 10px;
+}
+
+.wpcandy-topics-widget ul li.plugins a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -269px 8px;
+}
+
+.wpcandy-topics-widget ul li.blogging a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -379px 6px;
+}
+
+.wpcandy-topics-widget ul li.security a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -177px 18px;
+}
+
+.wpcandy-topics-widget ul li.mobile a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -667px 6px;
+}
+
+.wpcandy-topics-widget ul li.multisite a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -577px 8px;
+}
+
+.wpcandy-topics-widget ul li.themes a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -477px 8px;
+}
+
+.wpcandy-topics-widget ul li.buddypress a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: -877px 9px;
+}
+
+.wpcandy-topics-widget ul li.bbpress a {
+	background-image: url('../images/blog/topics-sprite.png');
+	background-position: 23px 8px;
+}
+
+/* Red */
+.wpcandy-topics-widget ul li.business a,
+.wpcandy-topics-widget ul li.hosting a {
+	background-color: #680600;
+	border-color: #5E0500;
+}
+
+/* Green */
+.wpcandy-topics-widget ul li.wordcamp a {
+	background-color: #27802A;
+	border-color: #63A765;
+}
+
+/* Purple */
+.wpcandy-topics-widget ul li.plugins a,
+.wpcandy-topics-widget ul li.mobile a {
+	background-color: #624171;
+	border-color: #9675A3;
+}
+
+/* Brown */
+.wpcandy-topics-widget ul li.blogging a,
+.wpcandy-topics-widget ul li.security a {
+	background-color: #423433;
+	border-color: #734742;
+}
+
+/* Blue */
+.wpcandy-topics-widget ul li.themes a,
+.wpcandy-topics-widget ul li.multisite a {
+	background-color: #264FAD;
+	border-color: #1E6DC0;
+}
+
+/* Orange */
+.wpcandy-topics-widget ul li.buddypress a {
+	background-color: #AF6A1E;
+	border-color: #CF9643;
+}
+
+/* Pink */
+.wpcandy-topics-widget ul li.bbpress a {
+	background-color: #FF1C56;
+	border-color: #FF3B6D;
+}
+
+.wpcandy-topics-widget ul li a:hover {
+	background-color: #282828 !important;
+	border: 2px solid #1e1e1e !important;
+}
+
 
 /*-----------------------------------------------------------------------------
  Navigation Below
