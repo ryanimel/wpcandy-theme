@@ -1099,6 +1099,7 @@ footer.entry-meta {
 .post-comment-count {
 	float: right;
 	font-size: 16px;
+	margin: 0 !important;
 	padding: 7px 0 0 0;
 	width: auto;
 }

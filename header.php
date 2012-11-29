@@ -70,4 +70,7 @@
 
 	<div id="main" class="site-main">
 		
-		<?php get_template_part( 'templates/parts/featured', 'posts' ); ?>
+		<?php 
+		if ( is_singular( 'post' ) || is_home() ) {
+			get_template_part( 'templates/parts/featured', 'posts' );
+		} ?>
