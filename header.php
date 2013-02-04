@@ -69,8 +69,3 @@
 	
 
 	<div id="main" class="site-main">
-		
-		<?php 
-		if ( is_singular( 'post' ) || is_home() ) {
-			get_template_part( 'templates/parts/featured', 'posts' );
-		} ?>

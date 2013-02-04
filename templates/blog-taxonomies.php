@@ -36,7 +36,7 @@
 		<?php } elseif(in_category('liveblogged')) { ?>
 		<li class="liveblogged"><a href="<?php bloginfo('url'); ?>/category/liveblogged/" title="More WPCandy Liveblogs">Liveblog</a></li>
 									
-		<?php } elseif( in_category( 'wp-late-night' ) || in_category( 'the-wpcandy-show' ) || in_category( 'the-sweet-plugin' ) || in_category( 'first-taste' ) ) { ?>
+		<?php } elseif( in_category( 'wp-late-night' ) || in_category( 'theme-show' ) || in_category( 'the-wpcandy-show' ) || in_category( 'the-sweet-plugin' ) || in_category( 'first-taste' ) ) { ?>
 		<li class="broadcasts"><a href="<?php bloginfo('url'); ?>/shows" title="More WPCandy Shows">Show</a></li>
 		<?php } ?>
 									
