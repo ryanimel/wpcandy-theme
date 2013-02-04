@@ -946,7 +946,8 @@ hr {
 	margin: 0 0 18px 0;
 }
 
-#main ul {
+#main ul,
+#main ol {
 	margin: 0 0 22px 28px;
 }
 
