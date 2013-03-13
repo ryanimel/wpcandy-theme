@@ -426,7 +426,7 @@ abbr[title], dfn[title] {
 }
 
 #proudly {
-	background: url('../images/blog/wordpress-logo.png') center top no-repeat;
+	background: url('../images/mint-40.png') center top no-repeat;
 }
 
 
@@ -3318,7 +3318,7 @@ p.comment-subscription-form label {
 #proudly {
 	font-size: 16px;
 	font-style: italic;
-	padding-top: 50px;
+	padding-top: 45px;
 }
 
 #credits {

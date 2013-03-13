@@ -6,22 +6,37 @@
 		
 			<h2 class="entry-title"><?php the_title(); ?></h2>
 			
+			<?php if ( !( has_tag( 'not-issue' ) ) ) { ?>
 			<div class="meta">
-				<p>Published <?php the_time( 'F, Y' ); ?></p>
+				<?php if ( has_tag( 'coming-soon' ) ) { ?>
+					<p>Coming <?php the_time( 'F, Y' ); ?></p>
+				<?php } else { ?>
+					<p>Published <?php the_time( 'F, Y' ); ?></p>
+				<?php } ?>
 			</div>
+			<?php } ?>
 			
 			<?php the_content(); ?>
 			
 		</div>
-	
+		
 		<div id="issue-cover">
 		
 			<?php the_post_thumbnail( 'issue-big' ); ?>
+			
+			<?php if ( !( has_tag( 'not-issue' ) ) && !( is_single( 'issue-01' ) ) ) { ?>
+			<div id="sponsors">
+				<h3>This issue's sponsors:</h3>
+				<?php the_excerpt(); ?>
+			</div><!-- #sponsors -->
+			<?php } ?>
 		
 		</div>
 		
+		<div class="clear"></div>
 	</div><!-- .entry-content -->
 	
+	<?php if ( !( has_tag( 'not-issue' ) ) && ( false == true ) ) { ?>
 	<footer class="entry-utility">
 		
 		<div class="wrap">
@@ -67,5 +82,6 @@
 		
 		</div><!-- .wrap -->
 	</footer><!-- .entry-utility -->
+	<?php } ?>
 	
 </article><!-- #post-<?php the_ID(); ?> -->

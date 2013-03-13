@@ -9,7 +9,7 @@
 
 				<div id="site-credits" class="before-2 column-4 last">
 					<p id="proudly">Proudly powered, of course, by WordPress</p>
-					<p id="credits">Quarterly sub-site by Ryan Imel.</p>
+					<p id="credits">Quarterly site by Ryan Imel, Quarterly logo by <a href="http://okaythemes.com" title="Mike McAlister's themes">Mike McAlister</a></p>
 				</div><!--#site-credits-->
 
 				<?php do_action( 'colophon_close' ); ?>

@@ -70,8 +70,13 @@ sup {
 -----------------------------------------------------------------------------*/
 
 body {
+	background: #ccc url('../images/quarterly/texture.gif') repeat;
 	font-family: 'Helvetica Neue', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 	font-size: 12px;
+}
+
+.clear {
+	clear: both;
 }
 
 
@@ -225,14 +230,54 @@ body {
  Content
 -----------------------------------------------------------------------------*/
 
+#primary {
+	background: #fff;
+	padding: 50px 0 0 0;
+}
+
 #page {
 	clear: both;
 }
 
 #page {
-	background: url('../images/quarterly/banner.jpg') center top no-repeat;
+/*	background: url('../images/quarterly/banner.jpg') center top no-repeat;*/
 	height: 400px;
 	width: 100%;
+}
+
+#masthead {
+	background: #000;
+	background-image: url('../images/quarterly/quarterly-header-d.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.h18 #masthead,
+.h19 #masthead,
+.h20 #masthead,
+.h21 #masthead,
+.h22 #masthead,
+.h23 #masthead {
+	background-image: url('../images/quarterly/quarterly-header-b.png');
+}
+
+.h24 #masthead,
+.h1 #masthead,
+.h2 #masthead,
+.h3 #masthead,
+.h4 #masthead,
+.h5 #masthead {
+	background-image: url('../images/quarterly/quarterly-header-a.png');
+}
+
+.h6 #masthead,
+.h7 #masthead,
+.h8 #masthead,
+.h9 #masthead,
+.h10 #masthead,
+.h11 #masthead {
+	background-image: url('../images/quarterly/quarterly-header-c.png');
 }
 
 #masthead .wrap {
@@ -242,11 +287,12 @@ body {
 }
 
 .site-title a {
-	background: url('../images/quarterly/quarterly-logo.png') left top no-repeat;
+	background: url('../images/quarterly/logo.png') left top no-repeat;
 	display: block;
-	height: 151px;
+	height: 108px;
+	margin: 25px 0 0 0;
 	text-indent: -999em;
-	width: 200px;
+	width: 467px;
 }
 
 #masthead hgroup {
@@ -255,40 +301,86 @@ body {
 }
 
 #masthead .main-navigation {
-	float: left;
-	margin: 68px 0 0 60px;
-	width: 400px;
+	border-right: 1px solid #000;
+	float: right;
+	margin: 140px 0 0 60px;
+	padding: 0;
+	width: 500px;
 }
 
 #masthead .main-navigation li {
-	float: left;
-	font-size: 16px;
-	margin: 0 24px 0 0;
+	border: 1px solid #000;
+	border-right: none;
+	border-bottom: none;
+	float: right;
+	font-size: 14px;
+	margin: 0 0 0 0;
+	padding: 0;
 }
 
 #masthead .main-navigation li a {
-	background: rgba( 0,0,0,0.45 );
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	color: #fff;
-	padding: 10px 10px;
+	background: #ccc;
+	color: #000;
+	display: block;
+	padding: 10px 20px;
 	text-decoration: none;
 }
 
-#masthead .main-navigation li a:hover {
-	background: rgba( 0,0,0,0.85 );
+#masthead .main-navigation li a:hover,
+#masthead .main-navigation li.current-menu-item a {
+	background: #fff;
 }
 
 #main {
 	clear: both;
 	margin: 0;
-	padding: 50px 0 0 0;
+	padding: 0 0 0 0;
 }
 
 .entry-content {
 	margin: 0 auto;
 	width: 978px;
+}
+
+#quarterly-intro {
+	float: left;
+	font-size: 16px;
+	line-height: 22px;
+	width: 280px;
+}
+
+#quarterly-intro p {
+	margin: 0 0 18px 0;
+}
+
+#quarterly-intro h2 {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 28px;
+	margin: 0 0 24px 0;
+}
+
+#issues {
+	float: right;
+	margin: 0 0 50px 0;
+	width: 680px;
+}
+
+#issues li {
+	float: left;
+	font-size: 16px;
+	margin: 0 0 0 40px;
+}
+
+#issues li p {
+	font-family: Georgia, serif;
+	margin: 14px 0 0 0;
+	text-align: center;
+}
+
+#issues li p a {
+	color: #333;
+	text-decoration: none;
 }
 
 #issue-desc {
@@ -297,6 +389,11 @@ body {
 	line-height: 24px;
 	margin: 0 25px 0 0;
 	width: 578px;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .entry-title {
@@ -308,6 +405,7 @@ body {
 #issue-desc .column {
 	float: left;
 	font-size: 22px;
+	margin: 0 0 40px 0;
 	width: 220px;
 }
 
@@ -322,7 +420,7 @@ body {
 	font-size: 12px;
 }
 
-.wpsc_buy_button {
+/*.wpsc_buy_button {
 	background: #25a8e0;
 	border: none;
 	border-right: 1px solid #1e86b3;
@@ -335,9 +433,32 @@ body {
 	margin: 15px 15px 6px 0;
 	padding: 6px 8px;
 	text-decoration: none;
+}*/
+
+.wpsc_buy_button {
+	background: #1e86b3;
+	border-right: 1px solid #1e86b3;
+	border-left: 1px solid #1e86b3;
+	border-top: 1px solid #1e86b3;
+	border-bottom: 1px solid #1e86b3;
+	color: #fff;
+	float: left;
+	font-size: 15px !important;
+	margin: 10px 0 4px 0;
+	padding: 7px 14px !important;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font: normal 14px/21px Arial, Tahoma, Verdana, sans-serif;
+	outline: none;
 }
 
 .wpsc_buy_button:hover {
+	background: #003366;
+	border-right: 1px solid #1e86b3;
+	border-left: 1px solid #1e86b3;
+	border-top: 1px solid #1e86b3;
+	border-bottom: 1px solid #1e86b3;
+	color: #fff;
 	cursor: pointer;
 }
 
@@ -443,15 +564,16 @@ body {
 
 #bottom {
 	background: #ccc url('../images/quarterly/texture.gif') repeat;
+	border-top: 1px solid #ccc;
 	padding: 18px 0 90px 0;
 }
 
 #site-credits {
-	background: url('../images/quarterly/wordpress-logo.png') center top no-repeat;
+	background: url('../images/mint-40.png') center top no-repeat;
 	color: #333;
 	font-size: 14px;
 	margin: 0 auto;
-	padding-top: 50px;
+	padding-top: 45px;
 	text-align: center;
 	width: 978px;
 }
@@ -484,6 +606,191 @@ p#credits {
 #fancy_notification_content .go_to_checkout {
 	display: block;
 	margin-bottom: 15px;
+}
+
+/* Not issue content */
+article.tag-not-issue {
+	padding-bottom: 25px;
+}
+
+article.tag-not-issue #issue-desc {
+
+}
+
+article.tag-not-issue .piece {
+	float: left;
+	margin: 14px 30px 0 0;
+	width: 255px;
+}
+
+hr {
+	clear: both;
+	margin: 0 0 30px 0;
+}
+
+.half-column {
+	float: left;
+	width: 40%;
+}
+
+.half-column-first {
+	margin-right: 10%;
+	width: 50%;
+}
+
+.half-column h3 {
+	font-size: 14px;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+}
+
+.half-column img {
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	float: right;
+	margin: 0 0 0 15px;
+}
+
+.half-column li {
+	border-bottom: 1px solid #eee;
+	float: left;
+	font-size: 16px;
+	line-height: 22px;
+	margin: 0 0 15px 0;
+	padding-bottom: 15px;
+	width: 100%;
+}
+
+em {
+	font-style: italic;
+}
+
+.half-column li em {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.half-column dl {
+	font-size: 13px;
+	font-style: normal;
+}
+
+.half-column dl dt {
+	font-weight: bold;
+}
+
+.half-column dl dd {
+	font-size: 12px;
+	font-style: italic;
+	margin: 0 0 15px 0;
+}
+
+/* Quarterly Sponsors */
+
+#sponsors {
+	padding: 20px 0 0 0;
+	width: 100%;
+}
+
+#sponsors h3 {
+	font-size: 16px;
+	margin: 0 0 14px 0;
+}
+
+#sponsors ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+#sponsors ul li {
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+#sponsors ul li.sponsor-backupbuddy {
+	margin: 0 30px 10px 20px;
+}
+
+#sponsors ul li.sponsor-eventespresso {
+	margin: 5px 0 20px 0;
+}
+
+#sponsors ul li.sponsor-shopp {
+	clear: both;
+	margin: 0 30px 10px 15px;
+}
+
+li.sponsor-pagely a {
+	background: url('../images/quarterly/sponsors.png') left top no-repeat;
+	display: block;
+	height: 85px;
+	text-indent: -999em;
+	width: 300px;
+}
+
+li.sponsor-pagely a:hover {
+	background: url('../images/quarterly/sponsors.png') -300px top no-repeat;
+}
+
+li.sponsor-backupbuddy a {
+	background: url('../images/quarterly/sponsors.png') left -85px no-repeat;
+	display: block;
+	height: 130px;
+	text-indent: -999em;
+	width: 105px;
+}
+
+li.sponsor-backupbuddy a:hover {
+	background: url('../images/quarterly/sponsors.png') -104px -85px no-repeat;
+}
+
+li.sponsor-eventespresso a {
+	background: url('../images/quarterly/sponsors.png') -455px -85px no-repeat;
+	display: block;
+	height: 48px;
+	text-indent: -999em;
+	width: 145px;
+}
+
+li.sponsor-eventespresso a:hover {
+	background: url('../images/quarterly/sponsors.png') -455px -132px no-repeat;
+}
+
+li.sponsor-zippykid a {
+	background: url('../images/quarterly/sponsors.png') -206px -125px no-repeat;
+	display: block;
+	height: 38px;
+	text-indent: -999em;
+	width: 125px;
+}
+
+li.sponsor-zippykid a:hover {
+	background: url('../images/quarterly/sponsors.png') -329px -125px no-repeat;
+}
+
+li.sponsor-shopp a {
+	background: url('../images/quarterly/sponsors.png') -208px -85px no-repeat;
+	display: block;
+	height: 38px;
+	text-indent: -999em;
+	width: 120px;
+}
+
+li.sponsor-shopp a:hover {
+	background: url('../images/quarterly/sponsors.png') -328px -85px no-repeat;
+}
+
+li.sponsor-themefoundry a {
+	background: url('../images/quarterly/sponsors.png') -208px -163px no-repeat;
+	display: block;
+	height: 28px;
+	text-indent: -999em;
+	width: 120px;
+}
+
+li.sponsor-themefoundry a:hover {
+	background: url('../images/quarterly/sponsors.png') -330px -163px no-repeat;
 }
 
 

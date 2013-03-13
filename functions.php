@@ -215,3 +215,28 @@ function rwi_wpcandy_remove_dashboard_widgets() {
 
 }
 
+// Adding date and time to the body classes
+// Generates time- and date-based classes for BODY, post DIVs, and comment LIs; relative to GMT (UTC)
+function sandbox_date_classes( $t, &$c, $p = '' ) {
+	$t = $t + ( get_option('gmt_offset') * 3600 );
+	$c[] = $p . 'y' . gmdate( 'Y', $t ); // Year
+	$c[] = $p . 'm' . gmdate( 'm', $t ); // Month
+	$c[] = $p . 'd' . gmdate( 'd', $t ); // Day
+	$c[] = $p . 'h' . gmdate( 'H', $t ); // Hour
+}
+
+// Add specific CSS class by filter
+add_filter( 'body_class', 'sandbox_classes' );
+
+function sandbox_classes( $classes ) {
+	
+	$c = array('wordpress');
+	sandbox_date_classes( time(), $c );
+	
+	foreach( $c as $single ) {
+		$classes[] = $single;
+	}
+	
+	return $classes;
+
+}
